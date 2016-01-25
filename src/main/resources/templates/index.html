@@ -29,26 +29,22 @@
 		<div class="templatemo-sidebar">
 			<header class="templatemo-site-header">
 				<div class="square"></div>
-				<h1><a href="/index.est">Team Cloud</a></h1>
+				<h1><a href="/">Team Cloud</a></h1>
 			</header>
 			<div class="profile-photo-container">
-				<img src="${userInfo.image}" alt="profile" class="img-responsive" />
+				<img src="{{userInfo.image}}" alt="profile" class="img-responsive" />
 				<div class="profile-photo-overlay"></div>
 			</div>
-			<nav class="templatemo-left-nav">
 				<ul>
 					<li>
-						<p th:text="${userInfo.email}" />
+						<i class="fa fa-eject fa-fw"></i><font color="white"><p th:text="${userInfo.email}" /></font>
 					</li>
 					<li>
-						<p th:text="${userInfo.teamName}" />
+						<i class="fa fa-eject fa-fw"></i><font color="white"><p th:text="${userInfo.teamName}" /></font>
 					</li>
-					<li>
-						<p th:text="${userInfo.name}" />
-					</li>
+					<li><i class="fa fa-eject fa-fw"></i><font color="white"><p th:text="${userInfo.name}"/></font></li>
 					<li><a href="/logout.est"><i class="fa fa-eject fa-fw"></i>Logout</a></li>
 				</ul>
-			</nav>
 		</div>
 		<!-- Main content -->
 		<div class="templatemo-content col-1 light-gray-bg">
@@ -56,9 +52,8 @@
 				<div class="row">
 					<nav class="templatemo-top-nav col-lg-12 col-md-12">
 						<ul class="text-uppercase">
-							<li><a href="">File Download</a></li>
-							<li><a href="">File Upload</a></li>
-							<li><a href="#" class="active">Reset</a></li>
+							<li><a href="#">File Download</a></li>
+							<li><a href="#">File Upload</a></li>
 						</ul>
 					</nav>
 				</div>

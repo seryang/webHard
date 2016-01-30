@@ -1,8 +1,8 @@
-package com.teamcloud.model.service;
-
-import javax.annotation.Resource;
+package com.teamcloud.service;
 
 import com.teamcloud.utill.DataPath;
+
+import javax.annotation.Resource;
 
 public class DataService {
 

@@ -1,7 +1,7 @@
 package com.teamcloud.controller;
 
-import com.teamcloud.model.service.DataService;
-import com.teamcloud.model.vo.FileVO;
+import com.teamcloud.service.DataService;
+import com.teamcloud.model.FileVO;
 import com.teamcloud.utill.DataPath;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;

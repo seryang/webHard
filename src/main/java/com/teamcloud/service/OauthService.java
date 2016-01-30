@@ -1,15 +1,14 @@
-package com.teamcloud.model.service;
+package com.teamcloud.service;
 
-import javax.annotation.Resource;
-
+import com.teamcloud.model.UserVO;
+import com.teamcloud.utill.UrlPath;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.teamcloud.model.vo.UserVO;
-import com.teamcloud.utill.UrlPath;
+import javax.annotation.Resource;
 
 @Service
 public class OauthService {

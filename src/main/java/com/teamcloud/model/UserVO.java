@@ -1,4 +1,4 @@
-package com.teamcloud.model.vo;
+package com.teamcloud.model;
 
 public class UserVO {
 	private String email;

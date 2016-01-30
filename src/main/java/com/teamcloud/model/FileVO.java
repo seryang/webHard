@@ -1,4 +1,4 @@
-package com.teamcloud.model.vo;
+package com.teamcloud.model;
 
 public class FileVO {
 	
@@ -65,6 +65,4 @@ public class FileVO {
 				.append(fileType).append("]");
 		return builder.toString();
 	}
-
-	
 }

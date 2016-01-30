@@ -1,24 +1,19 @@
 package com.teamcloud;
 
-import java.nio.charset.Charset;
-
-import javax.servlet.Filter;
-
+import com.teamcloud.service.DataService;
+import com.teamcloud.service.OauthService;
+import com.teamcloud.utill.DataPath;
+import com.teamcloud.utill.UrlPath;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
-import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.filter.CharacterEncodingFilter;
 
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.teamcloud.model.service.DataService;
-import com.teamcloud.model.service.OauthService;
-import com.teamcloud.utill.DataPath;
-import com.teamcloud.utill.UrlPath;
+import javax.servlet.Filter;
+import java.nio.charset.Charset;
 
 @SpringBootApplication
 public class Application {

@@ -8,20 +8,22 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.teamcloud.model.service.OauthService;
 import com.teamcloud.model.vo.UserVO;
 
 @Controller
-//@SessionAttributes("userInfo")
-public class loginController {
+@SessionAttributes("userInfo")
+
+public class LoginController {
 
 	@Autowired
 	private OauthService oauthService;
 
 	@RequestMapping(value="/", produces="text/plain;charset=UTF-8")
 	public String index(HttpSession session){
-		String url = "redirect:/login.est";
+		String url = "forward:/login.est";
 		try{
 			System.out.println("user info :" + session.getAttribute("userInfo") );
 			if(session.getAttribute("userInfo") != null){
@@ -37,14 +39,12 @@ public class loginController {
 	@RequestMapping(value="/login.est", produces="text/plain;charset=UTF-8" )
 	public String login() {
 		String loginPage = oauthService.getUriPath().toString();
-		System.out.println("로그인 페이지 !" + loginPage);
 		return "redirect:" + loginPage;
 	}
 
 	@RequestMapping(value="/authorization.est", produces="text/plain;charset=UTF-8")
 	public String authorization( @RequestParam("code") String code, Model model ) {
-		System.out.println("여긴 autorization");
-		String url = "redirect:/login.est";
+		String url = "forward:/login.est";
 		try{
 			JSONObject tokenInfo = oauthService.getToken(code);
 			if(tokenInfo != null){
@@ -63,6 +63,6 @@ public class loginController {
 	public String authorization(HttpSession session, Model model) {
 		session.invalidate();
 		model.asMap().clear();
-		return "redirect:/";
+		return "forward:/";
 	}
 }

@@ -3,6 +3,7 @@ package com.teamcloud.model.service;
 import javax.annotation.Resource;
 
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -13,10 +14,10 @@ import com.teamcloud.utill.UrlPath;
 @Service
 public class OauthService {
 
-	@Resource (name="TeamUP_Login_URI")
+	@Resource (name="oauthPath")
 	private UrlPath urlPath;
 
-	@Resource (name="restTemplate")
+	@Autowired
 	private RestTemplate restTemplate;
 
 	public String getUriPath(){

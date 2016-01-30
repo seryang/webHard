@@ -1,4 +1,4 @@
-package com.teamcloud.utill;
+package com.teamcloud.util;
 
 /*
  * enum or properties 파일로 수정 예정

@@ -2,8 +2,8 @@ package com.teamcloud;
 
 import com.teamcloud.service.DataService;
 import com.teamcloud.service.OauthService;
-import com.teamcloud.utill.DataPath;
-import com.teamcloud.utill.UrlPath;
+import com.teamcloud.util.DataPath;
+import com.teamcloud.util.UrlPath;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;

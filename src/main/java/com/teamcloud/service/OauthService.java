@@ -1,7 +1,7 @@
 package com.teamcloud.service;
 
 import com.teamcloud.model.UserVO;
-import com.teamcloud.utill.UrlPath;
+import com.teamcloud.util.UrlPath;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

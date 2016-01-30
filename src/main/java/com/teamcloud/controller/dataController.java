@@ -2,7 +2,7 @@ package com.teamcloud.controller;
 
 import com.teamcloud.service.DataService;
 import com.teamcloud.model.FileVO;
-import com.teamcloud.utill.DataPath;
+import com.teamcloud.util.DataPath;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -23,6 +23,7 @@ import java.util.Date;
 @SessionAttributes("fileList")
 public class DataController {
 
+
     @Autowired
     private DataService dataService;
 
@@ -38,7 +39,6 @@ public class DataController {
         String time = d.format(new Date(System.currentTimeMillis())) + " " + t.format(new Date(System.currentTimeMillis()));
         FileVO fileInfo = null;
         try {
-
             String filename = uploadfile.getOriginalFilename();
             String directory = dataPath.ABSOLUTE_PATH+dataPath.STORAGE_PATH;
             String filepath = Paths.get(directory, filename).toString();

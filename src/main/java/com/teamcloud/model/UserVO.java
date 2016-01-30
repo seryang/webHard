@@ -5,11 +5,8 @@ public class UserVO {
 	private String name;
 	private String image;
 	private String teamName;
-	
-	public UserVO(){}
 
 	public UserVO(String email, String name, String image, String teamName) {
-		super();
 		this.email = email;
 		this.name = name;
 		this.image = image;

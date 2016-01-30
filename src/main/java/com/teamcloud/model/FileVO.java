@@ -1,15 +1,19 @@
 package com.teamcloud.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity(name="FileInfo")
 public class FileVO {
-	
+	@Column(name = "File_Name")
 	private String fileName;
+	@Column(name = "File_Path")
 	private String filePath;
 	private long fileSize;
 	private String fileDate;
 	private String fileType;
 	
 	public FileVO(String fileName, String filePath, long fileSize, String fileDate, String fileType) {
-		super();
 		this.fileName = fileName;
 		this.filePath = filePath;
 		this.fileSize = fileSize;

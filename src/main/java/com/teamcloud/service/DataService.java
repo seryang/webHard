@@ -1,6 +1,6 @@
 package com.teamcloud.service;
 
-import com.teamcloud.utill.DataPath;
+import com.teamcloud.util.DataPath;
 
 import javax.annotation.Resource;
 

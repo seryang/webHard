@@ -1,70 +1,45 @@
 package com.teamcloud.controller;
 
+import com.teamcloud.model.vo.FileVO;
 import com.teamcloud.service.DataService;
-import com.teamcloud.model.FileVO;
-import com.teamcloud.util.DataPath;
-import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.net.URLEncoder;
-import java.nio.file.Paths;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import javax.servlet.http.HttpSession;
 
-@RestController
-@SessionAttributes("fileList")
+@Controller
+@SessionAttributes({"userInfo","fileList", "folderList", "path"})
 public class DataController {
-
 
     @Autowired
     private DataService dataService;
 
-    @Resource(name="dataPath")
-    private DataPath dataPath;
-
     // 파일 업로드
     @RequestMapping(value="/uploadFile", method = RequestMethod.POST)
-    public FileVO uploadFile(MultipartFile uploadfile, Model model) {
-        SimpleDateFormat d = new SimpleDateFormat("yyyy-MM-dd");
-        SimpleDateFormat t = new SimpleDateFormat("HH:mm:ss");
-
-        String time = d.format(new Date(System.currentTimeMillis())) + " " + t.format(new Date(System.currentTimeMillis()));
+    @ResponseBody
+    public FileVO uploadFile(MultipartFile uploadfile, HttpSession session) {
         FileVO fileInfo = null;
         try {
-            String filename = uploadfile.getOriginalFilename();
-            String directory = dataPath.ABSOLUTE_PATH+dataPath.STORAGE_PATH;
-            String filepath = Paths.get(directory, filename).toString();
-            BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File(filepath)));
-            stream.write(uploadfile.getBytes());
-            stream.close();
-            fileInfo = new FileVO(filename, dataPath.STORAGE_PATH, uploadfile.getSize(), time, uploadfile.getContentType());
-        }
-        catch (Exception e) {
+            fileInfo = dataService.upload(uploadfile, (String) session.getAttribute("path"));
+        } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println("받아온 fileInfo : " + fileInfo);
         return fileInfo;
     }
 
     // 폴더 생성
-    @RequestMapping(value="/addFolder")
-    public String addFolder(@RequestParam("folderName") String folderName) {
-        String checkMsg = "폴더 생성에 실패하였습니다.";
+    @RequestMapping(value="/addFolder", method = RequestMethod.POST)
+    @ResponseBody
+    public String addFolder( @RequestParam("folderName") String folderName, HttpSession session) {
+        String checkMsg = "존재하는 폴더입니다.";
         try {
-            File dir = new File(dataPath.ABSOLUTE_PATH + dataPath.STORAGE_PATH + "/" + folderName);
-            if(dir.exists()){
-                checkMsg = "존재하는 폴더입니다.";
-            }else{
-                if(dir.mkdirs()){
-                    checkMsg = "폴더가 생성되었습니다.";
-                }
+            if(dataService.addFolder( (String) session.getAttribute("path"), folderName)){
+                checkMsg = "폴더가 생성되었습니다.";
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -74,14 +49,25 @@ public class DataController {
 
     // 파일 다운로드
     @RequestMapping(value = "/downloadFile", method = RequestMethod.GET)
-    public void downloadFile (@RequestParam("filePath") String path, @RequestParam("fileName") String name,HttpServletResponse response)throws Exception {
-        byte fileByte[] = FileUtils.readFileToByteArray(new File("C:\\"+path+"\\"+name));
-        response.setContentType("application/octet-stream");
-        response.setContentLength(fileByte.length);
-        response.setHeader("Content-Disposition", "attachment; fileName=\"" + URLEncoder.encode(name,"UTF-8")+"\";");
-        response.setHeader("Content-Transfer-Encoding", "binary");
-        response.getOutputStream().write(fileByte);
-        response.getOutputStream().flush();
-        response.getOutputStream().close();
+    public void downloadFile (HttpSession session, @RequestParam("fileName") String name, HttpServletResponse response){
+        try {
+            dataService.download( (String) session.getAttribute("path"), name, response);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // 경로 변경
+    @RequestMapping(value = "/moveFolder", method = RequestMethod.GET)
+    public String moveFolder(@RequestParam("path") String movePath, Model model){
+        try {
+            System.out.println("옮겨갈 경로 : " + movePath);
+            model.addAttribute("path", movePath);
+            model.addAttribute("fileList", dataService.getFileList(movePath));
+            model.addAttribute("folderList", dataService.getFolderList(movePath));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "cloud";
     }
 }

@@ -1,9 +1,9 @@
 package com.teamcloud;
 
+import com.teamcloud.model.DirectoryDao;
+import com.teamcloud.model.FileDao;
 import com.teamcloud.service.DataService;
 import com.teamcloud.service.OauthService;
-import com.teamcloud.util.DataPath;
-import com.teamcloud.util.UrlPath;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -35,20 +35,8 @@ public class Application {
 		return characterEncodingFilter;
 	}
 
-	@Bean (name="oauthPath")
-	public UrlPath urlPath(){
-		return new UrlPath();
-	}
-
-	@Bean (name="dataPath")
-	public DataPath dataPath(){
-		return new DataPath();
-	}
-
 	@Bean
-	public RestTemplate rest(){
-		return new RestTemplate();
-	}
+	public RestTemplate restTemplate(){	return new RestTemplate(); }
 
 	@Bean
 	public OauthService oauthService(){
@@ -58,5 +46,15 @@ public class Application {
 	@Bean
 	public DataService dataService(){
 		return new DataService();
+	}
+
+	@Bean
+	public DirectoryDao directorydao(){
+		return new DirectoryDao();
+	}
+
+	@Bean
+	public FileDao fileDao(){
+		return new FileDao();
 	}
 }

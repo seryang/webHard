@@ -1,58 +1,62 @@
 package com.teamcloud.controller;
 
-import javax.servlet.http.HttpSession;
-
+import com.teamcloud.model.vo.UserVO;
+import com.teamcloud.service.DataService;
+import com.teamcloud.service.OauthService;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.teamcloud.service.OauthService;
-import com.teamcloud.model.UserVO;
+import javax.servlet.http.HttpSession;
 
 
 @Controller
-@SessionAttributes("userInfo")
-
+@SessionAttributes({"userInfo","fileList", "folderList", "path"})
+@PropertySource( value = { "classpath:application.properties" })
 public class LoginController {
 
 	@Autowired
 	private OauthService oauthService;
 
-	@RequestMapping(value="/", produces="text/plain;charset=UTF-8")
-	public String index(HttpSession session){
-		String url = "forward:/login.est";
+	@Autowired
+	private DataService dataService;
+
+	@Autowired
+	private Environment environment;
+
+
+	@RequestMapping(value="/")
+	public String index(HttpSession session, Model model) {
+		String url = "redirect:" + oauthService.getUriPath().toString();
+
 		try{
-			System.out.println("user info :" + session.getAttribute("userInfo") );
 			if(session.getAttribute("userInfo") != null){
-				url = "index";
+				model.addAttribute("path", environment.getRequiredProperty("ABSOLUTE_PATH"));
+				model.addAttribute("fileList", dataService.getFileList(environment.getRequiredProperty("ABSOLUTE_PATH")));
+				model.addAttribute("folderList", dataService.getFolderList(environment.getRequiredProperty("ABSOLUTE_PATH")));
+				url = "cloud";
 			}
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		System.out.println("url : " + url);
 		return url;
 	}
 
-	@RequestMapping(value="/login.est", produces="text/plain;charset=UTF-8" )
-	public String login() {
-		String loginPage = oauthService.getUriPath().toString();
-		return "redirect:" + loginPage;
-	}
+	@RequestMapping(value="/authorization")
+	public String authorization(@RequestParam("code") String code, Model model) {
+		String url = "redirect:/";
 
-	@RequestMapping(value="/authorization.est", produces="text/plain;charset=UTF-8")
-	public String authorization( @RequestParam("code") String code, Model model ) {
-		String url = "forward:/login.est";
 		try{
 			JSONObject tokenInfo = oauthService.getToken(code);
 			if(tokenInfo != null){
 				UserVO user = oauthService.getUserInfo(tokenInfo);
-				System.out.println(user.toString());
 				model.addAttribute("userInfo", user);
-				url = "index";
 			}
 		}catch(Exception e){
 			e.printStackTrace();
@@ -60,10 +64,15 @@ public class LoginController {
 		return url;
 	}
 
-	@RequestMapping(value="/logout.est", produces="text/plain;charset=UTF-8")
-	public String authorization(HttpSession session, Model model) {
-		session.invalidate();
-		model.asMap().clear();
-		return "forward:/";
+	@RequestMapping(value="/logout")
+	public String logout(HttpSession session) {
+		String url = "redirect:/";
+
+		try{
+			session.invalidate();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return url;
 	}
 }

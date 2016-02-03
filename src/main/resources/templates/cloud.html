@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome, EST Cloud</title>
+    <meta name="description" content="" />
+    <meta name="author" content="templatemo" />
+
+    <link
+            href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700'
+            rel='stylesheet' type='text/css' />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/templatemo-style.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<!-- Left column -->
+<div class="templatemo-flex-row">
+    <div class="templatemo-sidebar">
+        <header class="templatemo-site-header">
+            <div class="square"></div>
+            <h1>
+                <a href="/">EST Cloud</a>
+            </h1>
+        </header>
+        <div class="profile-photo-container" align="center">
+            <img th:src="${userInfo.image}" alt="profile" class="img-circle"/>
+        </div>
+        <ul align="center">
+            <li><font color="white" th:text="${userInfo.email}" /></li>
+            <li><font color="white" th:text="${userInfo.teamName} + ' / ' + ${userInfo.name}"/></li>
+            <li><a href="/logout">Logout</a></li>
+            <hr/>
+        </ul>
+    </div>
+    <!-- Main content -->
+    <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+            <div class="row">
+                <nav class="templatemo-top-nav col-lg-12 col-md-12">
+                    <ul class="text-uppercase">
+                        <li>
+                            <button type="button">
+                                <label style="cursor: pointer;" onclick="addFolder()">폴더 생성하기</label>
+                            </button>
+                        </li>
+                        <li>
+                            <form id="upload-file-form">
+                                <button type="button">
+                                    <label for="upload-file-input" style="cursor: pointer;">파일 올리기</label>
+                                    <input class="file-input" id="upload-file-input" type="file" name="uploadfile" accept="*" style="display:none" />
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="templatemo-content-container">
+            <div class="templatemo-flex-row flex-content-row templatemo-overflow-hidden">
+                <!-- overflow hidden for iPad mini landscape view-->
+                <div class="col-1 templatemo-overflow-hidden">
+                    <div class="templatemo-content-widget white-bg templatemo-overflow-hidden">
+                        <div class="templatemo-flex-row flex-content-row">
+                            <table id="showFile">
+                                <colgroup>
+                                    <col width="500"/>
+                                    <col width="300"/>
+                                    <col width="500"/>
+                                    <col width="200"/>
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>폴더/파일명</th>
+                                    <th>사이즈</th>
+                                    <th>날짜</th>
+                                    <th>타입</th>
+                                </tr>
+                                <tr class="showList" th:each="list : ${folderList}">
+                                    <td class="folder-list" style="cursor:pointer" th:value="${list.directoryPath}"><img src="img/folder.jpg" th:text="${list.directoryName}" /></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>폴더</td>
+                                </tr>
+                                <tr class="showList" th:each="list : ${fileList}">
+                                    <td class="file-list" style="cursor:pointer" th:value="${list.fileName}"><img src="img/file.jpg" th:text="${list.fileName}" /></td>
+                                    <td th:text="${list.fileSize} +  KB"/>
+                                    <td th:text="${list.fileDate}"/>
+                                    <td th:text="${list.fileType} + 파일"/>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="text-right">
+                <p>Copyright &copy; Seryang | All right reserved.</p>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/fileStream.js"></script>
+<!-- jQuery -->
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/templatemo-script.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#upload-file-input").on("change", uploadFile);
+
+        $(".file-list").click(function(){
+            var fileName = $(this).attr("value");
+            if(confirm(fileName + " 파일을 다운로드하시겠습니까?")){
+                location.href="downloadFile?fileName="+fileName;
+            }
+        });
+
+        $(".folder-list").click(function(){
+            var path = $(this).attr("value");
+            location.href="moveFolder?path="+path;
+            // POST 방식으로 숨겨서 보내려 했는데 실패
+//            $.ajax({
+//                url: "/moveFolder",
+//                type: "POST",
+//                data: "path=" + path,
+//                dataType: "text",
+//                error: function () {
+//                    alert("[Error]다시 시도해 주세요.")
+//                }
+//            });
+        });
+    });
+</script>
+</body>
+</html>

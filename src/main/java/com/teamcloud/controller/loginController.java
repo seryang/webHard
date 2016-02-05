@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
 
 
 @Controller
-@SessionAttributes({"userInfo","fileList", "folderList", "path"})
+@SessionAttributes({"userInfo","list", "path", "parentDirectory"})
 @PropertySource( value = { "classpath:application.properties" })
 public class LoginController {
 
@@ -38,8 +38,8 @@ public class LoginController {
 		try{
 			if(session.getAttribute("userInfo") != null){
 				model.addAttribute("path", environment.getRequiredProperty("ABSOLUTE_PATH"));
-				model.addAttribute("fileList", dataService.getFileList(environment.getRequiredProperty("ABSOLUTE_PATH")));
-				model.addAttribute("folderList", dataService.getFolderList(environment.getRequiredProperty("ABSOLUTE_PATH")));
+				model.addAttribute("list", dataService.getFile_Folder_List(environment.getRequiredProperty("ABSOLUTE_PATH")));
+				model.addAttribute("parentDirectory", "");
 				url = "cloud";
 			}
 		}catch(Exception e){

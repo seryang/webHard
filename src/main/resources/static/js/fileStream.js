@@ -1,29 +1,28 @@
-// 파일 업로드
-function uploadFile() {
+/*
+ 업로드 할 파일 유무 체크
+ */
+function valid_fileCheck() {
     var filename = $("#upload-file-input").attr("value").split("\\")[2];
     if(filename != undefined){
         if (confirm(filename + " 파일을 업로드하시겠습니까?")) {
             $.ajax({
-                url : "/uploadFile",
-                type : "POST",
-                data : new FormData($("#upload-file-form")[0]),
-                enctype : 'multipart/form-data',
-                processData : false,
-                contentType : false,
-                cache : false,
-                success : function(data) {
-                    if(data != null){
-                        alert("파일이 업로드 되었습니다.");
-                        //$(data).each(function(){
-                        //    $("#showFile").append(
-                        //        "<tr><td class='file-list' th:value='"+this.fileName+"'style='cursor:pointer;'>" + this.fileName + "</td><td>" + this.fileSize  + " KB		</td><td>" + this.fileDate + "</td><td>" + this.fileType+"</td></tr>");
-                        //});
-                        location.reload();
+                url: "/uploadCheck",
+                type: "POST",
+                data: new FormData($("#upload-file-form")[0]),
+                enctype: 'multipart/form-data',
+                processData: false,
+                contentType: false,
+                cache: false,
+                success: function (data) {
+                    if (data) {
+                        if(confirm(filename + " 파일은 이미 존재합니다. 덮어쓰시겠습니까?")) {
+                            upload_go();
+                        }
                     }else{
-                        alert("파일 업로드에 실패하였습니다.\n다시 시도해 주세요.");
+                        upload_go();
                     }
                 },
-                error : function() {
+                error: function () {
                     alert("[Error] 다시 시도해 주세요.")
                 }
             });
@@ -36,7 +35,6 @@ function uploadFile() {
  */
 function addFolder() {
     var folderName = prompt("생성할 폴더명을 입력해주세요", "");
-
     if (folderName != "") {
         if (folderName != null) {
             $.ajax({
@@ -59,4 +57,32 @@ function addFolder() {
     } else {
         alert("폴더명을 입력하세요.");
     }
+}
+
+/*
+ * 파일 업로드
+ */
+function upload_go(){
+    $.ajax({
+        url: "/uploadFile",
+        type: "POST",
+        data: new FormData($("#upload-file-form")[0]),
+        enctype: 'multipart/form-data',
+        processData: false,
+        contentType: false,
+        cache: false,
+        success: function (data) {
+            if (data) {
+                alert("파일이 업로드 되었습니다.");
+                //        "<tr><td class='file-list' th:value='"+this.fileName+"'style='cursor:pointer;'>" + this.fileName + "</td><td>" + this.fileSize  + " KB		</td><td>" + this.fileDate + "</td><td>" + this.fileType+"</td></tr>");
+                //});
+                location.reload();
+            } else {
+                alert("파일 업로드에 실패하였습니다.\n다시 시도해 주세요.");
+            }
+        },
+        error: function () {
+            alert("[Error] 다시 시도해 주세요.")
+        }
+    });
 }

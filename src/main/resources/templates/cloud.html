@@ -42,6 +42,9 @@
             <li><a href="/logout">Logout</a></li>
             <hr/>
         </ul>
+        <!--폴더 리스트 -->
+        <ul class="tree" style="margin-left: 15px;">
+        </ul>
     </div>
     <!-- Main content -->
     <div class="templatemo-content col-1 light-gray-bg">
@@ -60,6 +63,7 @@
                                     <label for="upload-file-input" style="cursor: pointer;">파일 올리기</label>
                                     <input class="file-input" id="upload-file-input" type="file" name="uploadfile" accept="*" style="display:none" />
                                 </button>
+
                             </form>
                         </li>
                     </ul>
@@ -67,6 +71,7 @@
             </div>
         </div>
         <div class="templatemo-content-container">
+            <p><b> [현재 경로] &nbsp;&nbsp;&nbsp;</b> <i th:text=" ${path}"/> </p>
             <div class="templatemo-flex-row flex-content-row templatemo-overflow-hidden">
                 <!-- overflow hidden for iPad mini landscape view-->
                 <div class="col-1 templatemo-overflow-hidden">
@@ -86,13 +91,16 @@
                                     <th>날짜</th>
                                     <th>타입</th>
                                 </tr>
-                                <tr class="showList" th:each="list : ${folderList}">
+                                <tr class="showList" th:if="${parentDirectory} != ''">
+                                    <td class="folder-list" style="cursor:pointer" th:value="${parentDirectory}"><img src="img/root.png" th:text=".." /></td>
+                                </tr>
+                                <tr class="showList" th:each="list : ${list.directoryList}">
                                     <td class="folder-list" style="cursor:pointer" th:value="${list.directoryPath}"><img src="img/folder.jpg" th:text="${list.directoryName}" /></td>
                                     <td></td>
                                     <td></td>
                                     <td>폴더</td>
                                 </tr>
-                                <tr class="showList" th:each="list : ${fileList}">
+                                <tr class="showList" th:each="list : ${list.fileList}">
                                     <td class="file-list" style="cursor:pointer" th:value="${list.fileName}"><img src="img/file.jpg" th:text="${list.fileName}" /></td>
                                     <td th:text="${list.fileSize} +  KB"/>
                                     <td th:text="${list.fileDate}"/>
@@ -117,30 +125,23 @@
 <!-- jQuery -->
 <script src="js/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="js/templatemo-script.js"></script>
+<script src="js/jquery-checktree.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        $("#upload-file-input").on("change", uploadFile);
+        $("#upload-file-input").on("change", valid_fileCheck);
 
+        //? 파일 다운로드 - >>>>>>>>>>>>>>>>> 인코딩 문제 해결하기 !
         $(".file-list").click(function(){
             var fileName = $(this).attr("value");
             if(confirm(fileName + " 파일을 다운로드하시겠습니까?")){
-                location.href="downloadFile?fileName="+fileName;
+                location.href="downloadFile?fileName="+encodeURI(encodeURIComponent(fileName));
             }
         });
 
+        // [수정 완료] 폴더 이동
         $(".folder-list").click(function(){
             var path = $(this).attr("value");
             location.href="moveFolder?path="+path;
-            // POST 방식으로 숨겨서 보내려 했는데 실패
-//            $.ajax({
-//                url: "/moveFolder",
-//                type: "POST",
-//                data: "path=" + path,
-//                dataType: "text",
-//                error: function () {
-//                    alert("[Error]다시 시도해 주세요.")
-//                }
-//            });
         });
     });
 </script>

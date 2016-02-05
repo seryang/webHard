@@ -13,8 +13,6 @@ public class UserVO {
 		this.teamName = teamName;
 	}
 
-	
-
 	public String getEmail() {
 		return email;
 	}

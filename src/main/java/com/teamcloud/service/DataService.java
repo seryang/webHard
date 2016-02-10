@@ -13,8 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -22,6 +20,7 @@ import java.util.*;
 @Service
 @PropertySource( value = { "classpath:application.properties" })
 public class DataService {
+
 	@Autowired
 	private Environment environment;
 
@@ -43,6 +42,7 @@ public class DataService {
 
 			//2) Mac Version
 			checkFile = new File(dirPath + "/" + go);
+
 			if(checkFile.isDirectory()){
 				DirectoryVO dvo = new DirectoryVO();
 				// 디렉토리 이름
@@ -60,7 +60,7 @@ public class DataService {
 				fvo.setFileSize(checkFile.length());
 				// 파일 타입
 				String [] splitData = checkFile.getName().split("\\.");
-				String fileType = splitData [(splitData .length)-1];
+				String fileType = splitData[ (splitData .length) - 1 ];
 				fvo.setFileType(fileType);
 				fileList.add(fvo);
 			}
@@ -105,32 +105,32 @@ public class DataService {
 		stream.close();
 	}
 
-	//? 파일 다운로드 >>>>>>>>>>>>>>>>> 인코딩 문제
+	// [수정 완료] 파일 다운로드 (인코딩 굿)
 	public void download(String path, String fileName, HttpServletResponse response) throws Exception {
 		System.out.println("다운로드 할 path : " + path);
 		System.out.println("다운로드 할 파일명 : " + fileName);
 
-		String decodeFileName = URLDecoder.decode(fileName, "UTF-8");
-		System.out.println("decode한 파일이름 : " + decodeFileName);
-
 //		1) Windows Version
-//		String downloadPath = path+"\\"+decodeFileName;
+//		String downloadPath = path+"\\"+fileName;
 
 //		2) Mac Version
-		String downloadPath = path+"/"+decodeFileName;
+		String downloadPath = path+"/"+fileName;
+
+		// 인코딩
+		fileName = new String(fileName.getBytes("UTF-8"), "ISO-8859-1");
 
 		System.out.println("풀 경로 : " + downloadPath);
 		byte fileByte[] = FileUtils.readFileToByteArray(new File(downloadPath));
 		response.setContentType("application/octet-stream");
 		response.setContentLength(fileByte.length);
-		response.setHeader("Content-Disposition", "attachment; fileName=\""+ URLEncoder.encode(decodeFileName, "UTF-8")+"\";");
+		response.setHeader("Content-Disposition", "attachment; fileName=\"" + fileName + "\";");
 		response.setHeader("Content-Transfer-Encoding", "binary");
 		response.getOutputStream().write(fileByte);
 		response.getOutputStream().flush();
 		response.getOutputStream().close();
 	}
 
-	// 상위 폴더의 Path 설정
+	// [완료 상위 폴더의 PATH 설정
 	public String getParentDirectory(String movePath) throws Exception{
 		String parentDirectory;
 		if(environment.getRequiredProperty("ABSOLUTE_PATH").equals(movePath)){

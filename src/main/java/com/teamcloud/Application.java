@@ -1,6 +1,7 @@
 package com.teamcloud;
 
 import com.teamcloud.service.DataService;
+import com.teamcloud.service.DirectoryTreeService;
 import com.teamcloud.service.OauthService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -39,4 +40,7 @@ public class Application {
 	public DataService dataService(){
 		return new DataService();
 	}
+
+	@Bean
+	public DirectoryTreeService directoryTreeService() { return new DirectoryTreeService(); }
 }

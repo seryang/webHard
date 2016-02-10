@@ -1,7 +1,12 @@
 package com.teamcloud.controller;
 
+import com.teamcloud.model.vo.FolderTreeNode;
 import com.teamcloud.service.DataService;
+import com.teamcloud.service.DirectoryTreeService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -10,20 +15,34 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @SessionAttributes({"userInfo","list", "path", "parentDirectory"})
 public class DataController {
+    @Autowired
+    private Environment environment;
+
+    @Autowired
+    private DirectoryTreeService directoryTreeService;
 
     @Autowired
     private DataService dataService;
+
+    Logger logger = LoggerFactory.getLogger(this.getClass());
 
     // [수정 완료] 파일 invalid check
     @RequestMapping(value="/uploadCheck", method = RequestMethod.POST)
     @ResponseBody
     public boolean uploadFileCheck(MultipartFile uploadfile, HttpSession session) {
         boolean flag = false;
-        String path = session.getAttribute("path") + "\\" +  uploadfile.getOriginalFilename();
+
+//       1) Windows Version
+//        String path = session.getAttribute("path") + "\\" +  uploadfile.getOriginalFilename();
+
+//        2) Mac Version
+        String path = session.getAttribute("path") + "/" +  uploadfile.getOriginalFilename();
 
         try{
             if(new File(path).exists()){
@@ -87,5 +106,23 @@ public class DataController {
             e.printStackTrace();
         }
         return "cloud";
+    }
+
+    @RequestMapping("/tree")
+    @ResponseBody
+    public List<FolderTreeNode> tree(@RequestParam(required = false, defaultValue = "") String selected) {
+        List<FolderTreeNode> result = new ArrayList<FolderTreeNode>();
+        try {
+            String absolutePath = environment.getRequiredProperty("ABSOLUTE_PATH");
+            FolderTreeNode root = new FolderTreeNode(absolutePath, absolutePath);
+            if (selected.equals("DataStore") == false) {
+                root.setOpened(true);
+            }
+            result.add(directoryTreeService.getDirectoryTree0(root, selected));
+        } catch (Exception e) {
+            logger.error(e.getMessage(), e);
+            result.add(new FolderTreeNode("NO FOLDER", ""));
+        }
+        return result;
     }
 }

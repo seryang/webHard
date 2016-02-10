@@ -16,10 +16,12 @@ function valid_fileCheck() {
                 success: function (data) {
                     if (data) {
                         if(confirm(filename + " 파일은 이미 존재합니다. 덮어쓰시겠습니까?")) {
-                            upload_go();
+                            uploadFromElement();
+                            //upload_go();
                         }
                     }else{
-                        upload_go();
+                        uploadFromElement();
+                        //upload_go();
                     }
                 },
                 error: function () {
@@ -29,6 +31,7 @@ function valid_fileCheck() {
         }
     }
 }
+
 
 /*
  * 폴더 생성
@@ -59,12 +62,57 @@ function addFolder() {
     }
 }
 
+function uploadFromElement() {
+    var formData = new FormData($("#upload-file-form")[0]);
+    upload_go(formData);
+}
+
+function uploadFromDragAndDrop(files) {
+    var formData = new FormData(),
+        length = files.length,
+        i = 0;
+
+    for (; i < length; i += 1) {
+        formData.append('uploadfile', files[i]);
+    }
+    upload_go(formData);
+}
+
 /*
  * 파일 업로드
  */
-function upload_go(){
+function upload_go(formData){
+
     $.ajax({
         url: "/uploadFile",
+        type: "POST",
+        data: formData,
+        //data: new FormData($("#upload-file-form")[0]),
+        //data: new FormData(document.getElementById("upload-file-form")),
+        enctype: 'multipart/form-data',
+        processData: false,
+        contentType: false,
+        cache: false,
+        success: function (data) {
+            if (data) {
+                alert("파일이 업로드 되었습니다.");
+                location.reload();
+            } else {
+                alert("파일 업로드에 실패하였습니다.\n다시 시도해 주세요.");
+            }
+        },
+        error: function () {
+            alert("[Error] 다시 시도해 주세요.")
+        }
+    });
+}
+
+/*
+ * 파일 삭제
+ */
+function deleteFile(){
+    $.ajax({
+        url: "/deleteFile",
         type: "POST",
         data: new FormData($("#upload-file-form")[0]),
         enctype: 'multipart/form-data',
@@ -74,8 +122,6 @@ function upload_go(){
         success: function (data) {
             if (data) {
                 alert("파일이 업로드 되었습니다.");
-                //        "<tr><td class='file-list' th:value='"+this.fileName+"'style='cursor:pointer;'>" + this.fileName + "</td><td>" + this.fileSize  + " KB		</td><td>" + this.fileDate + "</td><td>" + this.fileType+"</td></tr>");
-                //});
                 location.reload();
             } else {
                 alert("파일 업로드에 실패하였습니다.\n다시 시도해 주세요.");

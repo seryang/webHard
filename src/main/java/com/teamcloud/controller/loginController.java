@@ -30,15 +30,14 @@ public class LoginController {
 	@Autowired
 	private Environment environment;
 
-
 	@RequestMapping(value="/")
 	public String index(HttpSession session, Model model) {
 		String url = "redirect:" + oauthService.getUriPath().toString();
-
 		try{
 			if(session.getAttribute("userInfo") != null){
-				model.addAttribute("path", environment.getRequiredProperty("ABSOLUTE_PATH"));
-				model.addAttribute("list", dataService.getFile_Folder_List(environment.getRequiredProperty("ABSOLUTE_PATH")));
+				String absolutePath = environment.getRequiredProperty("ABSOLUTE_PATH");
+				model.addAttribute("path", absolutePath);
+				model.addAttribute("list", dataService.getFile_Folder_List(absolutePath));
 				model.addAttribute("parentDirectory", "");
 				url = "cloud";
 			}
@@ -75,4 +74,5 @@ public class LoginController {
 		}
 		return url;
 	}
+
 }

@@ -1,6 +1,6 @@
 package com.teamcloud.controller;
 
-import com.teamcloud.model.vo.FolderTreeNode;
+import com.teamcloud.model.vo.FolderTreeVO;
 import com.teamcloud.service.DataService;
 import com.teamcloud.service.DirectoryTreeService;
 import org.slf4j.Logger;
@@ -32,19 +32,15 @@ public class DataController {
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    // [수정 완료] 파일 invalid check
+    // 파일 invalid check
     @RequestMapping(value="/uploadCheck", method = RequestMethod.POST)
     @ResponseBody
-    public boolean uploadFileCheck(MultipartFile uploadfile, HttpSession session) {
+    public boolean uploadFileCheck(@RequestParam("name") String fileName, HttpSession session) {
         boolean flag = false;
-
-//       1) Windows Version
-//        String path = session.getAttribute("path") + "\\" +  uploadfile.getOriginalFilename();
-
-//        2) Mac Version
-        String path = session.getAttribute("path") + "/" +  uploadfile.getOriginalFilename();
-
+        System.out.println("넘어온 fileName : " + fileName);
         try{
+            fileName = new String(fileName.getBytes("UTF-8"), "ISO-8859-1");
+            String path = session.getAttribute("path") + "/" +  fileName;
             if(new File(path).exists()){
                 flag = true;
             }
@@ -54,7 +50,7 @@ public class DataController {
         return flag;
     }
 
-    // [수정 완료] 파일 업로드
+    // 파일 업로드
     @RequestMapping(value="/uploadFile", method = RequestMethod.POST)
     @ResponseBody
     public boolean uploadFile(MultipartFile uploadfile, HttpSession session) {
@@ -78,7 +74,7 @@ public class DataController {
         }
     }
 
-    // [수정 완료] 폴더 생성
+    // 폴더 생성
     @RequestMapping(value="/addFolder", method = RequestMethod.POST)
     @ResponseBody
     public String addFolder( @RequestParam("folderName") String folderName, HttpSession session) {
@@ -94,34 +90,34 @@ public class DataController {
         return checkMsg;
     }
 
-    // [수정 완료] 경로 변경
+    // 경로 변경
     @RequestMapping(value = "/moveFolder", method = RequestMethod.GET)
     public String moveFolder(@RequestParam("path") String movePath, Model model){
+        System.out.println("옮겨갈 경로 : " + movePath);
         try {
-            System.out.println("옮겨갈 경로 : " + movePath);
-            model.addAttribute("path", movePath);
-            model.addAttribute("list", dataService.getFile_Folder_List(movePath));
-            model.addAttribute("parentDirectory", dataService.getParentDirectory(movePath) );
+            if(new File(movePath).exists()){
+                model.addAttribute("path", movePath);
+                model.addAttribute("list", dataService.getFile_Folder_List(movePath));
+                model.addAttribute("parentDirectory", dataService.getParentDirectory(movePath) );
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
         return "cloud";
     }
 
+    // 폴더 트리
     @RequestMapping("/tree")
     @ResponseBody
-    public List<FolderTreeNode> tree(@RequestParam(required = false, defaultValue = "") String selected) {
-        List<FolderTreeNode> result = new ArrayList<FolderTreeNode>();
+    public List<FolderTreeVO> tree() {
+        List<FolderTreeVO> result = new ArrayList<FolderTreeVO>();
         try {
             String absolutePath = environment.getRequiredProperty("ABSOLUTE_PATH");
-            FolderTreeNode root = new FolderTreeNode(absolutePath, absolutePath);
-            if (selected.equals("DataStore") == false) {
-                root.setOpened(true);
-            }
-            result.add(directoryTreeService.getDirectoryTree0(root, selected));
+            FolderTreeVO root = new FolderTreeVO(absolutePath, absolutePath);
+            result.add(directoryTreeService.getDirectoryTree(root));
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
-            result.add(new FolderTreeNode("NO FOLDER", ""));
+            result.add(new FolderTreeVO("NO FOLDER", ""));
         }
         return result;
     }

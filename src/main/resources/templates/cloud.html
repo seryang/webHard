@@ -3,17 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Welcome, EST Cloud</title>
-    <meta name="description" content="" />
-    <meta name="author" content="templatemo" />
 
-    <link
-            href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700'
-            rel='stylesheet' type='text/css' />
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/templatemo-style.css" rel="stylesheet" />
+    <title>Welcome, EST Cloud</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'/>
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/templatemo-style.css" rel="stylesheet"/>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.0.9/themes/default/style.min.css" rel="stylesheet"/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,6 +21,10 @@
     <style>
         .jstree-anchor {
             color : lightgray !important;
+        }
+
+        tr:hover {
+            background-color: #999999;
         }
     </style>
 </head>
@@ -58,32 +59,46 @@
                 <nav class="templatemo-top-nav col-lg-12 col-md-12">
                     <ul class="text-uppercase">
                         <li>
-                            <button type="button">
-                                <label style="cursor: pointer;" onclick="addFolder()">폴더 생성하기</label>
-                            </button>
+                            <span class="label label-primary">
+                                <label style="cursor: pointer;" onclick="addFolder()">새폴더</label>
+                            </span>
                         </li>
                         <li>
                             <form id="upload-file-form">
-                                <button type="button">
-                                    <label for="upload-file-input" style="cursor: pointer;">파일 올리기</label>
+                               <span class="label label-warning">
+                                    <label for="upload-file-input" style="cursor: pointer;">올리기</label>
                                     <input class="file-input" id="upload-file-input" type="file" name="uploadfile" accept="*" style="display:none" />
-                                </button>
+                                </span>
 
                             </form>
                         </li>
                         <li>
-                            <button type="button">
-                                <label style="cursor: pointer;" onclick="deleteFile()">삭제하기</label>
-                            </button>
+                            <span class="label label-danger">
+                                <label style="cursor: pointer;" onclick="deleteFile()">삭제</label>
+                            </span>
                         </li>
-
                     </ul>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <form action="moveFolder" method="get">
+                                <input type="text" value="DataStore/" name="path" class="form-control" placeholder="Search for..."/>
+                            </form>
+                            <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Go!</button>
+                      </span>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </div>
         <div id ="filedrag">
             <div class="templatemo-content-container">
-                <p><b> [현재 경로] &nbsp;&nbsp;&nbsp;</b> <i th:text=" ${path}"/> </p>
+                <div class="alert alert alert-info" role="alert">
+                    <p><b> [PATH] &nbsp;&nbsp;&nbsp;</b> <i th:text=" ${path}"/> </p>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    <p><b> [COUNT <b th:text="${list.dirSize}+${list.fileSize}"/>]</b> <img src="img/folder.jpg"/> <b th:text="${list.dirSize}"/> <img src="img/file.jpg"/>  <b th:text="${list.fileSize}"/></p>
+                </div>
                 <div class="templatemo-flex-row flex-content-row templatemo-overflow-hidden">
                     <!-- overflow hidden for iPad mini landscape view-->
                     <div class="col-1 templatemo-overflow-hidden">
@@ -93,30 +108,34 @@
                                     <colgroup>
                                         <col width="500"/>
                                         <col width="300"/>
-                                        <col width="500"/>
+                                        <col width="300"/>
+                                        <col width="200"/>
                                         <col width="200"/>
                                     </colgroup>
                                     <thead>
                                     <tr>
-                                        <th>폴더/파일명</th>
-                                        <th>사이즈</th>
-                                        <th>날짜</th>
-                                        <th>타입</th>
+                                        <th>NAME</th>
+                                        <th>SIZE</th>
+                                        <th>DATE</th>
+                                        <th>TYPE</th>
+                                        <th>MEMO</th>
                                     </tr>
                                     <tr class="showList" th:if="${parentDirectory} != ''">
                                         <td class="folder-list" style="cursor:pointer" th:value="${parentDirectory}"><img src="img/root.png" th:text=".." /></td>
                                     </tr>
-                                    <tr class="showList" th:each="list : ${list.directoryList}">
-                                        <td class="folder-list" style="cursor:pointer" th:value="${list.directoryPath}"><img src="img/folder.jpg" th:text="${list.directoryName}" /></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>폴더</td>
-                                    </tr>
+                                        <tr class="showList" th:each="list : ${list.directoryList}">
+                                            <td class="folder-list" style="cursor:pointer" th:value="${list.directoryPath}"><input type="checkbox" th:value="${list.directoryName}"/><img src="img/folder.jpg" th:text="${list.directoryName}" /></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>폴더</td>
+                                            <td></td>
+                                        </tr>
                                     <tr class="showList" th:each="list : ${list.fileList}">
-                                        <td class="file-list" style="cursor:pointer" th:value="${list.fileName}"><img src="img/file.jpg" th:text="${list.fileName}" /></td>
-                                        <td th:text="${list.fileSize} +  KB"/>
-                                        <td th:text="${list.fileDate}"/>
-                                        <td th:text="${list.fileType} + 파일"/>
+                                        <td class="file-list" style="cursor:pointer" th:value="${list.fileName}"><input type="checkbox" th:value="${list.fileName}"/><img src="img/file.jpg" th:text="${list.fileName}" /></td>
+                                            <td th:text="${list.fileSize} +  KB"/>
+                                            <td th:text="${list.fileDate}"/>
+                                            <td th:text="${list.fileType}"/>
+                                           <td/>
                                     </tr>
                                     </thead>
                                 </table>
@@ -138,14 +157,12 @@
 <!-- jQuery -->
 <script src="js/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="js/templatemo-script.js"></script>
-<script src="js/jquery-checktree.js" type="text/javascript"></script>
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.0.9/themes/default/style.min.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/jstree/3.0.9/jstree.min.js"></script>
 <script th:inline="javascript" type="text/javascript">
     $(document).ready(function() {
         $("#upload-file-input").on("change", valid_fileCheck);
 
-        // [수정 완료] 파일 다운로드 - >>>>>>>>>>>>>>>>> 인코딩 문제 해결 !
+        // File Download
         $(".file-list").click(function(){
             var fileName = $(this).attr("value");
             if(confirm(fileName + " 파일을 다운로드하시겠습니까?")){
@@ -153,67 +170,58 @@
             }
         });
 
-        // [수정 완료] 폴더 이동
+        // Move Folder
         $(".folder-list").click(function(){
             var path = $(this).attr("value");
             location.href="moveFolder?path="+path;
         });
 
-
-        // 폴더 트리
+        // Folder Tree
         $(function() {
             $('#folderTree').jstree({
                 'core' : {
                     'data' : {
-                        "url" : "tree?selected=" + [[${session.path}]],
-                        "dataType" : "json" // needed only if you do not supply JSON headers
+                        "url" : "tree",
+                        "dataType" : "json"
                     }
                 }
             });
         });
+
+        // Folder Tree - Move Folder
         $('#folderTree').on("changed.jstree", function (e, data) {
             location.href="moveFolder?path="+data.selected;
         });
     });
 
     // HTML5 - Drag and Drop Upload
-
-    $(document).on('dragenter', function (e)
-    {
+    $(document).on('dragenter', function (e){
         e.stopPropagation();
         e.preventDefault();
     });
-    $(document).on('dragover', function (e)
-    {
+    $(document).on('dragover', function (e){
         e.stopPropagation();
         e.preventDefault();
         obj.css('border', '2px dotted #0B85A1');
     });
-    $(document).on('drop', function (e)
-    {
+    $(document).on('drop', function (e){
         e.stopPropagation();
         e.preventDefault();
     });
-
-
     var obj = $("#filedrag");
     obj.on('dragenter', function (e){
         e.stopPropagation();
         e.preventDefault();
         $(this).css('border', '2px solid #0B85A1');
     });
-
     obj.on('dragover', function (e){
         e.stopPropagation();
         e.preventDefault();
     });
-
     obj.on('drop', function (e){
         $(this).css('border', '2px dotted #0B85A1');
         e.preventDefault();
         var files = e.originalEvent.dataTransfer.files;
-//        var filename = files.attr("value").split("\\")[2];
-//        alert("filename : " + filename);
         uploadFromDragAndDrop(files);
         $(this).css('border', '0px');
     });

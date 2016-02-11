@@ -1,644 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/resources/templates/cloud.html" line="21" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/resources/templates/cloud.html" line="15" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a8ee850-f46f-4a88-84d5-e95299eb9afb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/teamcloud/model/vo/FolderTreeNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/teamcloud/service/DirectoryTreeService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/teamcloud/service/DirectoryTreeServiceTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/40de750233b3ce8268f235ba0b6a489b" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/5Sv5r.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/5bc924c90b254d2dba75ba29b3b9fd11" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/75f07dddba1371fd4d682a1dd0856a2e" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/798ce620514f0e9eb191be9599855a7f" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/7e12f28fbe8210c4c5336e9ce2811193" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/89dSf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/8e225ecfafc975e33029f7abcbd17210" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/I4XxR.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/KpeP3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/N6iem.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/Rup3Y.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/Sej2t.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/XUshi.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/adFeedback.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/adFeedback.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/ados" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/ados.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/all.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/analytics.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/b027fb42cc2d4f2693aed08b41250d61.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/b74c41bde9504109a4623df78be18903.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/beacon.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/c2f87315e2b3817cc1e8c22f6d552ae3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/external-editor.en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/full-anon.en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/i(1).gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/i(2).gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/i(3).gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/i.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/jobs.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/ndWQ0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/p.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/photo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/post-validation.en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/prettify-full.en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/quant.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/snippet-javascript.en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/stub.en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/tp9dK.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/x4ZMC.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/Hibernate 5/x51ra.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/00-RELEASENOTES" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/BUGS" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/CONTRIBUTING" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/COPYING" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/INSTALL" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/MANIFESTO" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/COPYING" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/adapters/ae.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/adapters/libev.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/adapters/libevent.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/adapters/libuv.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/async.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/async.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/dict.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/dict.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/examples/example-ae.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/examples/example-libev.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/examples/example-libevent.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/examples/example-libuv.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/examples/example.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/fmacros.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/hiredis.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/hiredis.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/net.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/net.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/sds.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/sds.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/test.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/hiredis/zmalloc.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/COPYING" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/ChangeLog" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/INSTALL" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/Makefile.in" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/autogen.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/bin/jemalloc.sh.in" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/bin/pprof" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/config.guess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/config.stamp.in" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/config.sub" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/configure.ac" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/coverage.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/doc/html.xsl.in" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/doc/jemalloc.xml.in" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/doc/manpages.xsl.in" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/doc/stylesheet.xsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/arena.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/atomic.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/base.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/bitmap.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/chunk.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/chunk_dss.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/chunk_mmap.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/ckh.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/ctl.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/extent.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/hash.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/huge.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/jemalloc_internal.h.in" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/jemalloc_internal_defs.h.in" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/jemalloc_internal_macros.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/mb.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/mutex.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/private_namespace.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/private_symbols.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/private_unnamespace.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/prng.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/prof.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/public_namespace.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/public_unnamespace.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/ql.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/qr.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/quarantine.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/rb.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/rtree.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/size_classes.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/stats.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/tcache.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/tsd.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/internal/util.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/jemalloc.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/jemalloc_defs.h.in" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/jemalloc_macros.h.in" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/jemalloc_mangle.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/jemalloc_protos.h.in" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/jemalloc/jemalloc_rename.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/msvc_compat/inttypes.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/msvc_compat/stdbool.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/msvc_compat/stdint.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/include/msvc_compat/strings.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/install-sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/arena.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/atomic.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/base.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/bitmap.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/chunk.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/chunk_dss.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/chunk_mmap.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/ckh.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/ctl.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/extent.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/hash.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/huge.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/jemalloc.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/mb.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/mutex.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/prof.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/quarantine.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/rtree.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/stats.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/tcache.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/tsd.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/util.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/src/zone.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/SFMT-alti.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/SFMT-params.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/SFMT-params11213.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/SFMT-params1279.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/SFMT-params132049.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/SFMT-params19937.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/SFMT-params216091.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/SFMT-params2281.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/SFMT-params4253.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/SFMT-params44497.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/SFMT-params607.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/SFMT-params86243.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/SFMT-sse2.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/SFMT.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/jemalloc_test.h.in" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/jemalloc_test_defs.h.in" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/math.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/mq.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/mtx.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/test.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/include/test/thd.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/integration/MALLOCX_ARENA.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/integration/aligned_alloc.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/integration/allocated.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/integration/allocm.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/integration/mallocx.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/integration/mremap.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/integration/posix_memalign.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/integration/rallocm.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/integration/rallocx.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/integration/thread_arena.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/integration/thread_tcache_enabled.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/integration/xallocx.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/src/SFMT.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/src/math.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/src/mtx.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/src/test.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/src/thd.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/test.sh.in" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/SFMT.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/bitmap.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/ckh.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/hash.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/junk.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/mallctl.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/math.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/mq.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/mtx.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/prof_accum.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/prof_accum.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/prof_accum_a.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/prof_accum_b.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/prof_gdump.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/prof_idump.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/ql.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/qr.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/quarantine.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/rb.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/rtree.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/stats.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/tsd.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/util.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/jemalloc/test/unit/zero.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/linenoise/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/linenoise/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/linenoise/README.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/linenoise/example.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/linenoise/linenoise.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/linenoise/linenoise.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/COPYRIGHT" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/HISTORY" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/INSTALL" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/doc/contents.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/doc/cover.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/doc/logo.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/doc/lua.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/doc/lua.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/doc/lua.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/doc/luac.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/doc/luac.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/doc/manual.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/doc/manual.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/doc/readme.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/etc/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/etc/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/etc/all.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/etc/lua.hpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/etc/lua.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/etc/lua.pc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/etc/luavs.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/etc/min.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/etc/noparser.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/etc/strict.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/fpconv.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/fpconv.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lapi.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lapi.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lauxlib.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lauxlib.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lbaselib.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lcode.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lcode.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/ldblib.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/ldebug.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/ldebug.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/ldo.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/ldo.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/ldump.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lfunc.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lfunc.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lgc.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lgc.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/linit.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/liolib.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/llex.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/llex.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/llimits.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lmathlib.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lmem.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lmem.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/loadlib.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lobject.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lobject.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lopcodes.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lopcodes.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/loslib.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lparser.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lparser.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lstate.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lstate.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lstring.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lstring.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lstrlib.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/ltable.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/ltable.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/ltablib.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/ltm.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/ltm.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lua.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lua.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lua_bit.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lua_cjson.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lua_cmsgpack.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lua_struct.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/luac.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/luaconf.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lualib.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lundump.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lundump.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lvm.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lvm.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lzio.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/lzio.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/print.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/strbuf.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/src/strbuf.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/bisect.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/cf.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/echo.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/env.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/factorial.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/fib.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/fibfor.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/globals.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/hello.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/life.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/luac.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/printf.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/readonly.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/sieve.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/sort.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/table.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/trace-calls.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/trace-globals.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/lua/test/xd.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/deps/update-jemalloc.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/redis.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/runtest" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/runtest-cluster" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/runtest-sentinel" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/sentinel.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/Makefile.dep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/adlist.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/adlist.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/ae.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/ae.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/ae_epoll.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/ae_evport.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/ae_kqueue.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/ae_select.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/anet.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/anet.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/aof.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/asciilogo.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/bio.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/bio.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/bitops.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/blocked.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/cluster.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/cluster.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/config.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/config.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/crc16.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/crc64.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/crc64.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/db.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/debug.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/dict.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/dict.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/endianconv.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/endianconv.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/fmacros.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/help.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/hyperloglog.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/intset.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/intset.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/latency.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/latency.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/lzf.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/lzfP.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/lzf_c.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/lzf_d.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/memtest.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/mkreleasehdr.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/multi.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/networking.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/notify.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/object.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/pqsort.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/pqsort.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/pubsub.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/rand.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/rand.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/rdb.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/rdb.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/redis-benchmark.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/redis-check-aof.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/redis-check-dump.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/redis-cli.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/redis-trib.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/redis.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/redis.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/redisassert.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/release.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/replication.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/rio.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/rio.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/scripting.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/sds.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/sds.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/sentinel.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/setproctitle.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/sha1.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/sha1.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/slowlog.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/slowlog.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/solarisfixes.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/sort.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/sparkline.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/sparkline.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/syncio.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/t_hash.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/t_list.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/t_set.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/t_string.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/t_zset.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/testhelp.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/util.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/util.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/valgrind.sup" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/version.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/ziplist.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/ziplist.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/zipmap.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/zipmap.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/zmalloc.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/src/zmalloc.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/assets/default.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/assets/encodings.rdb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/assets/hash-zipmap.rdb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/cluster/cluster.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/cluster/run.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/cluster/tests/00-base.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/cluster/tests/01-faildet.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/cluster/tests/02-failover.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/cluster/tests/03-failover-loop.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/cluster/tests/04-resharding.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/cluster/tests/05-slave-selection.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/cluster/tests/06-slave-stop-cond.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/cluster/tests/07-replica-migration.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/cluster/tests/08-update-msg.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/cluster/tests/09-pubsub.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/cluster/tests/10-manual-failover.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/cluster/tests/11-manual-takeover.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/cluster/tests/helpers/onlydots.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/cluster/tests/includes/init-tests.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/cluster/tmp/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/helpers/bg_complex_data.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/helpers/gen_write_load.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/instances.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/integration/aof-race.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/integration/aof.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/integration/convert-zipmap-hash-on-load.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/integration/logging.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/integration/rdb.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/integration/redis-cli.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/integration/replication-2.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/integration/replication-3.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/integration/replication-4.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/integration/replication-psync.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/integration/replication.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/sentinel/run.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/sentinel/tests/00-base.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/sentinel/tests/01-conf-update.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/sentinel/tests/02-slaves-reconf.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/sentinel/tests/03-runtime-reconf.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/sentinel/tests/04-slave-selection.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/sentinel/tests/05-manual.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/sentinel/tests/06-ckquorum.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/sentinel/tests/includes/init-tests.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/sentinel/tmp/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/support/cluster.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/support/redis.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/support/server.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/support/test.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/support/tmpfile.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/support/util.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/test_helper.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/aofrw.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/auth.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/basic.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/bitops.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/dump.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/expire.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/hyperloglog.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/introspection.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/latency-monitor.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/limits.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/maxmemory.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/memefficiency.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/multi.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/obuf-limits.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/other.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/printver.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/protocol.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/pubsub.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/quit.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/scan.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/scripting.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/slowlog.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/sort.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/type/hash.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/type/list-2.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/type/list-3.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/type/list-common.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/type/list.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/type/set.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/tests/unit/type/zset.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/build-static-symbols.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/cluster_fail_time.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/create-cluster/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/create-cluster/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/create-cluster/create-cluster" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/generate-command-help.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/hyperloglog/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/hyperloglog/hll-err.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/hyperloglog/hll-gnuplot-graph.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/install_server.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/lru/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/lru/test-lru.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/mkrelease.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/redis-copy.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/redis-sha1.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/redis_init_script" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/redis_init_script.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/speed-regression.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/redis-3.0.3/utils/whatisdoing.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/LICENSE-MIT" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/component.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/demo/basic/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/demo/basic/root.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/demo/filebrowser/data/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/demo/filebrowser/file_sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/demo/filebrowser/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/demo/sitebrowser/class.db.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/demo/sitebrowser/class.tree.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/demo/sitebrowser/data.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/demo/sitebrowser/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/dist/jstree.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/dist/jstree.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/dist/themes/default-dark/32px.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/dist/themes/default-dark/40px.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/dist/themes/default-dark/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/dist/themes/default-dark/style.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/dist/themes/default-dark/throbber.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/dist/themes/default/32px.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/dist/themes/default/40px.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/dist/themes/default/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/dist/themes/default/style.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/dist/themes/default/throbber.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/jstree.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/intro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/jstree.changed.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/jstree.checkbox.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/jstree.conditionalselect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/jstree.contextmenu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/jstree.dnd.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/jstree.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/jstree.massload.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/jstree.search.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/jstree.sort.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/jstree.state.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/jstree.types.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/jstree.unique.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/jstree.wholerow.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/misc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/outro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/sample.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/themes/base.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/themes/default-dark/32px.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/themes/default-dark/40px.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/themes/default-dark/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/themes/default-dark/style.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/themes/default-dark/throbber.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/themes/default/32px.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/themes/default/40px.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/themes/default/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/themes/default/style.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/themes/default/throbber.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/themes/main.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/themes/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/themes/responsive.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/src/vakata-jstree.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/test/unit/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/test/unit/libs/qunit.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/test/unit/libs/qunit.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/test/unit/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/test/visual/desktop/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/test/visual/mobile/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/test/visual/screenshots/desktop/.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/test/visual/screenshots/desktop/desktop.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/test/visual/screenshots/desktop/home.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/test/visual/screenshots/mobile/.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/test/visual/screenshots/mobile/home.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataStore/vakata-jstree-8ea6ce7/test/visual/screenshots/mobile/mobile.png" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/teamcloud/model/vo/FolderTreeVO.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/teamcloud/model/vo/FolderTreeNode.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery-checktree.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/teamcloud/Application.java" afterPath="$PROJECT_DIR$/src/main/java/com/teamcloud/Application.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/teamcloud/controller/dataController.java" afterPath="$PROJECT_DIR$/src/main/java/com/teamcloud/controller/dataController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/teamcloud/controller/loginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/teamcloud/controller/loginController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/teamcloud/service/DataService.java" afterPath="$PROJECT_DIR$/src/main/java/com/teamcloud/service/DataService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/teamcloud/service/DirectoryTreeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/teamcloud/service/DirectoryTreeService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/Application.properties" afterPath="$PROJECT_DIR$/src/main/resources/Application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/templatemo-style.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/templatemo-style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/fileStream.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/fileStream.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/cloud.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/cloud.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/teamcloud/service/DirectoryTreeServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/teamcloud/service/DirectoryTreeServiceTest.java" />
     </list>
     <ignored path="webShell.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -703,143 +81,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DataController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/controller/DataController.java">
+      <file leaf-file-name="templatemo-style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/templatemo-style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="124" column="9" selection-start-line="124" selection-start-column="9" selection-end-line="124" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3936#3952#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InvocableHandlerMethod.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.2.4.RELEASE/bcc167b48ae8c9478eb4a8f0e99d095dbf38013f/spring-web-4.2.4.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.7567568">
-              <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.4583335">
+              <caret line="67" column="34" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cloud.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/cloud.html">
+      <file leaf-file-name="Application.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/Application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.490196">
-              <caret line="167" column="39" selection-start-line="167" selection-start-column="39" selection-end-line="167" selection-end-column="39" />
-              <folding>
-                <marker date="1455092815000" expanded="true" signature="7557:7558" placeholder="//..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fileStream.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fileStream.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/controller/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5064935">
-              <caret line="39" column="74" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DirectoryTreeService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/service/DirectoryTreeService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="30" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#587#603#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DirectoryTreeServiceTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/teamcloud/service/DirectoryTreeServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="136" selection-start-line="16" selection-start-column="136" selection-end-line="16" selection-end-column="136" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FolderTreeNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/model/vo/FolderTreeNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
-              <folding>
-                <element signature="e#418#419#0" expanded="true" />
-                <element signature="e#443#444#0" expanded="true" />
-                <element signature="e#478#479#0" expanded="true" />
-                <element signature="e#506#507#0" expanded="true" />
-                <element signature="e#537#538#0" expanded="true" />
-                <element signature="e#564#565#0" expanded="true" />
-                <element signature="e#604#605#0" expanded="true" />
-                <element signature="e#636#637#0" expanded="true" />
-                <element signature="e#684#685#0" expanded="true" />
-                <element signature="e#715#716#0" expanded="true" />
-                <element signature="e#776#777#0" expanded="true" />
-                <element signature="e#816#817#0" expanded="true" />
-                <element signature="e#864#865#0" expanded="true" />
-                <element signature="e#905#906#0" expanded="true" />
-                <element signature="e#949#950#0" expanded="true" />
-                <element signature="e#986#987#0" expanded="true" />
-                <element signature="e#1026#1027#0" expanded="true" />
-                <element signature="e#1054#1055#0" expanded="true" />
-                <element signature="e#1105#1106#0" expanded="true" />
-                <element signature="e#1139#1140#0" expanded="true" />
-                <element signature="e#1281#1282#0" expanded="true" />
-                <element signature="e#1320#1321#0" expanded="true" />
-                <element signature="e#1373#1374#0" expanded="true" />
-                <element signature="e#1421#1422#0" expanded="true" />
-                <element signature="e#1458#1459#0" expanded="true" />
-                <element signature="e#1495#1496#0" expanded="true" />
-                <element signature="e#1544#1545#0" expanded="true" />
-                <element signature="e#1588#1589#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileVO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/model/vo/FileVO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="e#215#216#0" expanded="true" />
-                <element signature="e#231#232#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DirectoryVO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/model/vo/DirectoryVO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.78417265">
+              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -852,6 +108,7 @@
       <list>
         <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -1070,7 +327,7 @@
       <map>
         <entry key="$USER_HOME$/IntelliJ용/webShell" value="1453947924838" />
         <entry key="$USER_HOME$/Spring Sample/gs-rest-service-master/complete" value="1453425914927" />
-        <entry key="$PROJECT_DIR$" value="1454462983249" />
+        <entry key="$PROJECT_DIR$" value="1455167767214" />
         <entry key="$USER_HOME$/webShell" value="1453751662000" />
       </map>
     </option>
@@ -1362,7 +619,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/teamcloud/model/vo/File.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/teamcloud/model/vo/Directory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/teamcloud/conf/HibernateConf.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/teamcloud/service/OauthService.java" />
         <option value="$PROJECT_DIR$/build/resources/main/static/js/fileStream.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/teamcloud/model/vo/FileVO.java" />
@@ -1370,17 +626,21 @@
         <option value="$PROJECT_DIR$/src/main/java/com/teamcloud/model/vo/DirectoryVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/teamcloud/model/DirectoryDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/teamcloud/model/FileDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/Application.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/fileStream.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/teamcloud/service/DataService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/teamcloud/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/teamcloud/model/FolderTreeNode.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/teamcloud/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/cloud.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/teamcloud/model/vo/FolderTreeNode.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/teamcloud/service/DirectoryTreeServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/teamcloud/controller/DataController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/reloadPage.js" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/com/teamcloud/model/vo/FolderTreeVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/teamcloud/service/DirectoryTreeService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/teamcloud/service/DirectoryTreeServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/fileStream.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/teamcloud/service/DataService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/teamcloud/controller/DataController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/cloud.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/templatemo-style.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/Application.properties" />
       </list>
     </option>
   </component>
@@ -1425,8 +685,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1532,8 +790,34 @@
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="webShell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webShell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1562,6 +846,10 @@
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1586,6 +874,100 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="teamcloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webShell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webShell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teamcloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webShell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webShell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teamcloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webShell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webShell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teamcloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1619,8 +1001,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webShell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webShell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teamcloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -1630,8 +1044,8 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="옮겨갈&#9;null&#9;null&#10;AnnotationConfiguration&#9;PSI&#9;JAVA://com.fasterxml.classmate.AnnotationConfiguration&#10;.est&#9;null&#9;null" />
-    <property name="FullScreen" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -2168,6 +1582,8 @@
       <workItem from="1454896117256" duration="293000" />
       <workItem from="1454897323401" duration="5114000" />
       <workItem from="1455086041710" duration="9026000" />
+      <workItem from="1455149615626" duration="27127000" />
+      <workItem from="1455190613890" duration="931000" />
     </task>
     <servers />
   </component>
@@ -2189,27 +1605,25 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144233000" />
+    <option name="totallyTimeSpent" value="172291000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19256309" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19176598" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41386783" sideWeight="0.07782516" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48429036" sideWeight="0.07782516" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3798141" sideWeight="0.9221748" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40903056" sideWeight="0.9221748" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13984375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="7.8125E-4" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2219,7 +1633,9 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="7.8125E-4" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2240,7 +1656,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2253,9 +1669,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2279,8 +1693,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="e#215#216#0" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="false" />
+            <element signature="e#231#232#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2329,7 +1743,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1094#1107#0" expanded="true" />
+            <element signature="e#1150#1158#0" expanded="true" />
+            <element signature="e#2030#2046#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2338,8 +1756,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="22" selection-end-column="26" />
           <folding>
-            <element signature="e#215#216#0" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="false" />
+            <element signature="e#231#232#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2422,38 +1840,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.85011184">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/jquery-checktree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.743922">
-          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/bootstrap-filestyle.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/jquery-1.11.2.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="126.35714">
-          <caret line="2" column="14606" selection-start-line="2" selection-start-column="14606" selection-end-line="2" selection-end-column="14606" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/resources/main/static/js/fileStream.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15397082">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -2491,30 +1881,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/service/OauthService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/model/DirectoryDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/model/vo/UserVO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2533,45 +1899,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/conf/HibernateConf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.444445">
-          <caret line="44" column="52" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="471" column="18" selection-start-line="471" selection-start-column="18" selection-end-line="471" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/service/DataService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5769231">
-          <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="43" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/model/vo/FileVO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <element signature="e#215#216#0" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="false" />
+            <element signature="e#231#232#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2584,105 +1918,160 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fileStream.js">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.2.4.RELEASE/bcc167b48ae8c9478eb4a8f0e99d095dbf38013f/spring-web-4.2.4.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/model/vo/FolderTreeNode.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/model/DirectoryDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
-          <folding>
-            <element signature="e#418#419#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#478#479#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#537#538#0" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#604#605#0" expanded="true" />
-            <element signature="e#636#637#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#715#716#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#816#817#0" expanded="true" />
-            <element signature="e#864#865#0" expanded="true" />
-            <element signature="e#905#906#0" expanded="true" />
-            <element signature="e#949#950#0" expanded="true" />
-            <element signature="e#986#987#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
-            <element signature="e#1054#1055#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
-            <element signature="e#1139#1140#0" expanded="true" />
-            <element signature="e#1281#1282#0" expanded="true" />
-            <element signature="e#1320#1321#0" expanded="true" />
-            <element signature="e#1373#1374#0" expanded="true" />
-            <element signature="e#1421#1422#0" expanded="true" />
-            <element signature="e#1458#1459#0" expanded="true" />
-            <element signature="e#1495#1496#0" expanded="true" />
-            <element signature="e#1544#1545#0" expanded="true" />
-            <element signature="e#1588#1589#0" expanded="true" />
-          </folding>
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/cloud.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/service/OauthService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.490196">
-          <caret line="167" column="39" selection-start-line="167" selection-start-column="39" selection-end-line="167" selection-end-column="39" />
-          <folding>
-            <marker date="1455092815000" expanded="true" signature="7557:7558" placeholder="//..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/conf/HibernateConf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.28529412">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0338235">
+          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/teamcloud/service/DirectoryTreeServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="136" selection-start-line="16" selection-start-column="136" selection-end-line="16" selection-end-column="136" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.2.4.RELEASE/bcc167b48ae8c9478eb4a8f0e99d095dbf38013f/spring-web-4.2.4.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.7567568">
-          <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
-          <folding />
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/service/DirectoryTreeService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="30" selection-end-column="17" />
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#587#603#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/controller/DataController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="124" column="9" selection-start-line="124" selection-start-column="9" selection-end-line="124" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3936#3952#0" expanded="true" />
+            <element signature="e#463#477#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5064935">
-          <caret line="39" column="74" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
+        <state vertical-scroll-proportion="0.41911766">
+          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45673078">
+          <caret line="4" column="2465" selection-start-line="4" selection-start-column="2465" selection-end-line="4" selection-end-column="2465" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/service/DataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35222054">
+          <caret line="55" column="25" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+          <folding>
+            <element signature="e#1094#1107#0" expanded="true" />
+            <element signature="e#1150#1158#0" expanded="true" />
+            <element signature="e#2030#2046#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fileStream.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding>
+            <marker date="1455180752000" expanded="false" signature="0:1" placeholder="/*...*/" />
+            <marker date="1455180752000" expanded="true" signature="3432:3482" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/jquery-1.11.2.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40035588">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/controller/DataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/model/vo/FolderTreeVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/teamcloud/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="52" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/cloud.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.1568627">
+          <caret line="86" column="67" selection-start-line="86" selection-start-column="67" selection-end-line="86" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/templatemo-style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.4583335">
+          <caret line="67" column="34" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78417265">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
           <folding />
         </state>
       </provider>

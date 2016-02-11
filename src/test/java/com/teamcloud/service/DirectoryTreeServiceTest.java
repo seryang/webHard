@@ -1,6 +1,6 @@
 package com.teamcloud.service;
 
-import com.teamcloud.model.vo.FolderTreeNode;
+import com.teamcloud.model.vo.FolderTreeVO;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,8 +13,8 @@ public class DirectoryTreeServiceTest {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Test
-    public void testGetDirectoryTree0() throws Exception {
-        FolderTreeNode resultTreeNodes = directoryTreeService.getDirectoryTree0(new FolderTreeNode("DataStore", "DataStore"), "DataStore");
+    public void testGetDirectoryTree() throws Exception {
+        FolderTreeVO resultTreeNodes = directoryTreeService.getDirectoryTree(new FolderTreeVO("DataStore", "DataStore"));
         logger.debug("Result Folder Tree : {}", resultTreeNodes);
     }
 }

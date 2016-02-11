@@ -24,8 +24,8 @@ public class DataService {
 	@Autowired
 	private Environment environment;
 
-	// [수정완료] 현재 Path의 (파일 / 폴더) 리스트 보여주기
-	public Map<String, List> getFile_Folder_List(String dirPath) throws Exception{
+	// 현재 Path의 (파일 / 폴더) 리스트 보여주기
+	public Map<String, Object> getFile_Folder_List(String dirPath) throws Exception{
 		System.out.println("보여줄 리스트의 경로 : " + dirPath);
 
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -34,13 +34,10 @@ public class DataService {
 		List<FileVO> fileList = new ArrayList<FileVO>();
 
 		String [] allFile_Folder_List = new File(dirPath).list();
+
 		File checkFile;
 		for(String go : allFile_Folder_List){
 
-			//1) Windows Version
-//			checkFile = new File(dirPath + "\\" + go);
-
-			//2) Mac Version
 			checkFile = new File(dirPath + "/" + go);
 
 			if(checkFile.isDirectory()){
@@ -65,21 +62,17 @@ public class DataService {
 				fileList.add(fvo);
 			}
 		}
-		Map <String, List> map = new HashMap<String, List>();
+		Map <String, Object> map = new HashMap<String, Object>();
+		map.put("dirSize", directoryList.size());
+		map.put("fileSize", fileList.size());
 		map.put("fileList",fileList);
 		map.put("directoryList",directoryList);
 		return map;
 	}
 
-	// [수정완료] 폴더 생성하기
+	// 폴더 생성하기
 	public boolean addFolder(String parentFolder, String childFolder) throws Exception {
 		boolean flag = false;
-
-		// 1) Windows Version
-//		String fullPath = parentFolder +"\\"+ childFolder;
-
-
-		// 2) Mac Version
 		String fullPath = parentFolder+"/"+childFolder;
 		System.out.println("생성할 폴더 : " + fullPath);
 		File dir = new File(fullPath);
@@ -91,7 +84,7 @@ public class DataService {
 		return flag;
 	}
 
-	// [수정 완료] 파일 업로드
+	// 파일 업로드
 	public void upload(MultipartFile uploadFile, String dirPath) throws Exception {
 		System.out.println("저장될 파일의 폴더 : " + dirPath);
 
@@ -105,18 +98,13 @@ public class DataService {
 		stream.close();
 	}
 
-	// [수정 완료] 파일 다운로드 (인코딩 굿)
+	// 파일 다운로드
 	public void download(String path, String fileName, HttpServletResponse response) throws Exception {
 		System.out.println("다운로드 할 path : " + path);
 		System.out.println("다운로드 할 파일명 : " + fileName);
 
-//		1) Windows Version
-//		String downloadPath = path+"\\"+fileName;
-
-//		2) Mac Version
 		String downloadPath = path+"/"+fileName;
 
-		// 인코딩
 		fileName = new String(fileName.getBytes("UTF-8"), "ISO-8859-1");
 
 		System.out.println("풀 경로 : " + downloadPath);
@@ -130,7 +118,7 @@ public class DataService {
 		response.getOutputStream().close();
 	}
 
-	// [완료 상위 폴더의 PATH 설정
+	// 상위 폴더의 PATH 설정
 	public String getParentDirectory(String movePath) throws Exception{
 		String parentDirectory;
 		if(environment.getRequiredProperty("ABSOLUTE_PATH").equals(movePath)){

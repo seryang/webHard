@@ -2,7 +2,7 @@ WebShell [ Data Storage ]
 
 > ESTsoft corp. Pilot Project
 
-> Account for newShare 
+> Account for Project 
 
 - 
 

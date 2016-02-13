@@ -1,6 +1,6 @@
 package com.teamcloud.model.vo;
 
-public class DirectoryVO{
+public class DirectoryVO implements FileAware{
 
     private int id;
 
@@ -40,5 +40,35 @@ public class DirectoryVO{
                 "directoryName='" + directoryName + '\'' +
                 ", directoryPath='" + directoryPath + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean isFile() {
+        return false;
+    }
+
+    @Override
+    public String getName() {
+        return getDirectoryName();
+    }
+
+    @Override
+    public String getPath() {
+        return getDirectoryPath();
+    }
+
+    @Override
+    public String getSize() {
+        return "";
+    }
+
+    @Override
+    public String getDate() {
+        return "";
+    }
+
+    @Override
+    public String getType() {
+        return "";
     }
 }

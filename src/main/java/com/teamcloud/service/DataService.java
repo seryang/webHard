@@ -1,6 +1,7 @@
 package com.teamcloud.service;
 
 import com.teamcloud.model.vo.DirectoryVO;
+import com.teamcloud.model.vo.FileAware;
 import com.teamcloud.model.vo.FileVO;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,25 +22,29 @@ import java.util.*;
 @PropertySource( value = { "classpath:application.properties" })
 public class DataService {
 
+
+	private static final int PAGE_SIZE = 10;
 	@Autowired
 	private Environment environment;
 
 	// 현재 Path의 (파일 / 폴더) 리스트 보여주기
-	public Map<String, Object> getFile_Folder_List(String dirPath) throws Exception{
+	public Map<String, Object> getFileFolderList(String dirPath, int currentPage) throws Exception{
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		String [] allFile_Folder_List = new File(dirPath).list();
+		String [] fileFolderList = new File(dirPath).list();
 
 		List<DirectoryVO> directoryList = new ArrayList<DirectoryVO>();
 		List<FileVO> fileList = new ArrayList<FileVO>();
+		List<FileAware> dataList = new ArrayList<FileAware>();
 		File checkFile;
 
-		for(String go : allFile_Folder_List){
+		for(String go : fileFolderList){
 			checkFile = new File(dirPath + "/" + go);
 			if(checkFile.isDirectory()){
 				DirectoryVO dvo = new DirectoryVO();
 				dvo.setDirectoryName(checkFile.getName()); // 디렉토리 이름
 				dvo.setDirectoryPath(checkFile.getPath()); // 디렉토리 경로
 				directoryList.add(dvo);
+				dataList.add(dvo);
 			}else{
 				FileVO fvo = new FileVO();
 				fvo.setFileName(checkFile.getName()); // 파일 이름
@@ -49,13 +54,32 @@ public class DataService {
 				String fileType = splitData[ (splitData .length) - 1 ];
 				fvo.setFileType(fileType); // 파일 타입
 				fileList.add(fvo);
+				dataList.add(fvo);
 			}
 		}
+
+		int pageList = fileFolderList.length / PAGE_SIZE;
+		if( (fileFolderList.length % PAGE_SIZE > 0) ){
+			pageList += 1;
+		}
+
+		Collections.sort(dataList, new Comparator<FileAware>() {
+			@Override
+			public int compare(FileAware o1, FileAware o2) {
+				return o1.isFile() ? 1 : -1;
+			}
+		});
+		dataList = dataList.subList((currentPage - 1) * PAGE_SIZE, Math.min(dataList.size(), currentPage * PAGE_SIZE));
+
+
 		Map <String, Object> map = new HashMap<String, Object>();
 		map.put("dirSize", directoryList.size());
 		map.put("fileSize", fileList.size());
 		map.put("fileList",fileList);
 		map.put("directoryList",directoryList);
+		map.put("pageList", pageList);
+		map.put("dataList", dataList);
+
 		return map;
 	}
 

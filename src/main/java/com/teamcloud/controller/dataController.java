@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@SessionAttributes({"userInfo","list", "path", "parentDirectory"})
+@SessionAttributes({"userInfo","list", "path", "parentDirectory", "pageList"})
 public class DataController {
     @Autowired
     private Environment environment;
@@ -92,11 +92,12 @@ public class DataController {
 
     // 경로 변경
     @RequestMapping(value = "/moveFolder")
-    public String moveFolder(@RequestParam("path") String movePath, Model model){
+    public String moveFolder(@RequestParam("path") String movePath, Model model,
+                             @RequestParam(required = false, defaultValue = "1", value = "currentPage") int currentPage){
         try {
             if(new File(movePath).exists()){
                 model.addAttribute("path", movePath);
-                model.addAttribute("list", dataService.getFile_Folder_List(movePath));
+                model.addAttribute("list", dataService.getFileFolderList(movePath, currentPage));
                 model.addAttribute("parentDirectory", dataService.getParentDirectory(movePath));
             }
         } catch (Exception e) {
@@ -124,14 +125,15 @@ public class DataController {
 
     // 바로가기
     @RequestMapping(value = "/shortCut")
-    public String shortCut(@RequestParam("path") String path, Model model){
+    public String shortCut(@RequestParam("path") String path, Model model,
+                           @RequestParam(required = false, defaultValue = "1", value = "currentPage") int currentPage){
         path = environment.getRequiredProperty("ABSOLUTE_PATH") +"/"+ path;
 
         try {
             if(new File(path).exists()){
-                model.addAttribute("path", path);
-                model.addAttribute("list", dataService.getFile_Folder_List(path));
+                model.addAttribute("list", dataService.getFileFolderList(path, currentPage));
                 model.addAttribute("parentDirectory", dataService.getParentDirectory(path));
+                model.addAttribute("path", path);
             }
         } catch (Exception e) {
             logger.error(e.getMessage(), e);

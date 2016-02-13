@@ -1,6 +1,6 @@
 package com.teamcloud.model.vo;
 
-public class FileVO{
+public class FileVO implements FileAware{
 
 	private int id;
 	private String fileName;
@@ -59,4 +59,35 @@ public class FileVO{
 				", fileType='" + fileType + '\'' +
 				'}';
 	}
+
+	@Override
+	public boolean isFile() {
+		return true;
+	}
+
+	@Override
+	public String getName() {
+		return getFileName();
+	}
+
+	@Override
+	public String getPath() {
+		return "";
+	}
+
+	@Override
+	public String getSize() {
+		return getFileSize() + " KB";
+	}
+
+	@Override
+	public String getDate() {
+		return getFileDate();
+	}
+
+	@Override
+	public String getType() {
+		return getFileType();
+	}
+
 }

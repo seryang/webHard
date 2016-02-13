@@ -115,45 +115,57 @@
                                         <col width="200"/>
                                     </colgroup>
                                     <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th>NAME</th>
-                                            <th>SIZE</th>
-                                            <th>DATE</th>
-                                            <th>TYPE</th>
-                                            <th>MEMO</th>
-                                        </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th>NAME</th>
+                                        <th>SIZE</th>
+                                        <th>DATE</th>
+                                        <th>TYPE</th>
+                                        <th>MEMO</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="showList" th:if="${parentDirectory} != ''">
-                                            <td></td>
-                                            <td class="folder-list" style="cursor:pointer" th:value="${parentDirectory}"><img src="img/root.png" th:text=".." /></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr class="showList" th:each="list : ${list.directoryList}">
-                                            <td><input type="radio" name="checkData" th:value="${list.directoryName}"/></td>
-                                            <td class="folder-list" th:value="${list.directoryPath}" style="cursor:pointer"><img src="img/folder.jpg" th:text="${list.directoryName}" /></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr class="showList" th:each="list : ${list.fileList}">
-                                            <td><input type="radio" name="checkData" th:value="${list.fileName}"/></td>
-                                            <td class="file-list" th:value="${list.fileName}" style="cursor: pointer;"><img src="img/file.jpg" th:text="${list.fileName}" /></td>
-                                            <td th:text="${list.fileSize} + KB"/>
-                                            <td th:text="${list.fileDate}"/>
-                                            <td th:text="${list.fileType}"/>
-                                            <td/>
-                                        </tr>
+                                    <tr class="showList" th:if="${parentDirectory} != ''">
+                                        <td></td>
+                                        <td class="folder-list" style="cursor:pointer" th:value="${parentDirectory}"><img src="img/root.png" th:text=".." /></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="showList" th:each="list : ${list.dataList}">
+                                        <td><input type="radio" name="checkData" th:value="${list.name}"/></td>
+                                        <td th:class="${list.file ? 'file-list' : 'folder-list'}" th:value="${list.file ? list.name : list.path}" style="cursor: pointer;">
+                                            <img th:src="${list.file ? 'img/file.jpg' : 'img/folder.jpg'}" th:text="${list.name}" /></td>
+                                        <td th:text="${list.size}"/>
+                                        <td th:text="${list.date}"/>
+                                        <td th:text="${list.type}"/>
+                                        <td/>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div align="center">
+                    <nav>
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a>
+                            </li>
+
+                            <li th:class="${ ( (param.currentPage != null) and (param.currentPage[0] == page.toString()))
+                            or ( (param.currentPage == null) and (page == 1) ) } ? 'active' : ''"
+                                th:each="page : ${#numbers.sequence( 1, list.pageList)}">
+                                <a th:text="${page}" class="page-num" style="cursor:pointer;"/>
+                            </li>
+
+                            <li>
+                                <a href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
             <footer class="text-right">
@@ -205,6 +217,12 @@
             location.href="moveFolder?path="+data.selected;
         });
 
+        // Page Move
+        $('.page-num').click(function () {
+            var pageNum = $(this).text();
+            var sessionPath = [[${session.path}]];
+            goToPage(sessionPath, pageNum);
+        });
 
         // ShortCut - Vlid Check
         $("#search").keyup(function() {

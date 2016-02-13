@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import javax.servlet.http.HttpSession;
 
 @Controller
-@SessionAttributes({"userInfo","list", "path", "parentDirectory"})
+@SessionAttributes({"userInfo","list", "path", "parentDirectory", "pageList"})
 @PropertySource( value = { "classpath:application.properties" })
 public class LoginController {
 
@@ -34,14 +34,15 @@ public class LoginController {
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@RequestMapping(value="/")
-	public String index(HttpSession session, Model model) {
+	public String index(HttpSession session, Model model,
+						@RequestParam(required = false, defaultValue = "1", value = "currentPage") int currentPage) {
 		String url = "redirect:" + oauthService.getUriPath().toString();
 
 		try {
 			if(session.getAttribute("userInfo") != null){
 				String absolutePath = environment.getRequiredProperty("ABSOLUTE_PATH");
 				model.addAttribute("path", absolutePath);
-				model.addAttribute("list", dataService.getFile_Folder_List(absolutePath));
+				model.addAttribute("list", dataService.getFileFolderList(absolutePath, currentPage));
 				model.addAttribute("parentDirectory", "");
 				url = "cloud";
 			}

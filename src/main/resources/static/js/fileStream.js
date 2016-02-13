@@ -1,3 +1,8 @@
+
+function goToPage(path, pageNum){
+    location.href = "moveFolder?path=" + path + "&currentPage=" + pageNum;
+}
+
 // 업로드 할 파일 유무 체크
 function valid_fileCheck(name, formData) {
     var fileName;

@@ -1,8 +1,5 @@
 package com.teamcloud.model.vo;
 
-/**
- * Created by Seryang on 2016-02-01.
- */
 public class DirectoryVO{
 
     private int id;

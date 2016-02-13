@@ -37,15 +37,15 @@ public class DataController {
     @ResponseBody
     public boolean uploadFileCheck(@RequestParam("name") String fileName, HttpSession session) {
         boolean flag = false;
-        System.out.println("넘어온 fileName : " + fileName);
-        try{
-            fileName = new String(fileName.getBytes("UTF-8"), "ISO-8859-1");
+
+        try {
+            fileName = new String(fileName.getBytes("UTF-8"), "ISO-8859-1"); // 인코딩
             String path = session.getAttribute("path") + "/" +  fileName;
             if(new File(path).exists()){
                 flag = true;
             }
-        }catch(Exception e){
-            e.printStackTrace();
+        } catch (Exception e) {
+            logger.error(e.getMessage(), e);
         }
         return flag;
     }
@@ -59,18 +59,18 @@ public class DataController {
             dataService.upload(uploadfile, (String) session.getAttribute("path"));
             flag = true;
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(e.getMessage(), e);
         }
         return flag;
     }
 
     // 파일 다운로드
-    @RequestMapping(value = "/downloadFile", method = RequestMethod.GET)
+    @RequestMapping(value = "/downloadFile")
     public void downloadFile (HttpSession session, @RequestParam("fileName") String fileName, HttpServletResponse response){
         try {
             dataService.download( (String) session.getAttribute("path"), fileName, response);
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(e.getMessage(), e);
         }
     }
 
@@ -78,42 +78,76 @@ public class DataController {
     @RequestMapping(value="/addFolder", method = RequestMethod.POST)
     @ResponseBody
     public String addFolder( @RequestParam("folderName") String folderName, HttpSession session) {
-        System.out.println("서버에서 받은 folderName : " + folderName);
         String checkMsg = "존재하는 폴더입니다.";
+
         try {
             if(dataService.addFolder( (String) session.getAttribute("path"), folderName)){
                 checkMsg = "폴더가 생성되었습니다.";
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(e.getMessage(), e);
         }
         return checkMsg;
     }
 
     // 경로 변경
-    @RequestMapping(value = "/moveFolder", method = RequestMethod.GET)
+    @RequestMapping(value = "/moveFolder")
     public String moveFolder(@RequestParam("path") String movePath, Model model){
-        System.out.println("옮겨갈 경로 : " + movePath);
         try {
             if(new File(movePath).exists()){
                 model.addAttribute("path", movePath);
                 model.addAttribute("list", dataService.getFile_Folder_List(movePath));
-                model.addAttribute("parentDirectory", dataService.getParentDirectory(movePath) );
+                model.addAttribute("parentDirectory", dataService.getParentDirectory(movePath));
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(e.getMessage(), e);
+        }
+        return "cloud";
+    }
+
+    // 바로가기 - 경로체크
+    @RequestMapping(value = "/checkPath")
+    @ResponseBody
+    public String checkPath(@RequestParam("path") String path, Model model){
+        String checkMsg = "Not found.";
+        path = environment.getRequiredProperty("ABSOLUTE_PATH") +"/"+ path;
+
+        try {
+            if(new File(path).exists()){
+                checkMsg = "Find !";
+            }
+        } catch (Exception e) {
+            logger.error(e.getMessage(), e);
+        }
+        return checkMsg;
+    }
+
+    // 바로가기
+    @RequestMapping(value = "/shortCut")
+    public String shortCut(@RequestParam("path") String path, Model model){
+        path = environment.getRequiredProperty("ABSOLUTE_PATH") +"/"+ path;
+
+        try {
+            if(new File(path).exists()){
+                model.addAttribute("path", path);
+                model.addAttribute("list", dataService.getFile_Folder_List(path));
+                model.addAttribute("parentDirectory", dataService.getParentDirectory(path));
+            }
+        } catch (Exception e) {
+            logger.error(e.getMessage(), e);
         }
         return "cloud";
     }
 
     // 폴더 트리
-    @RequestMapping("/tree")
+    @RequestMapping(value = "/tree")
     @ResponseBody
     public List<FolderTreeVO> tree() {
         List<FolderTreeVO> result = new ArrayList<FolderTreeVO>();
         try {
             String absolutePath = environment.getRequiredProperty("ABSOLUTE_PATH");
             FolderTreeVO root = new FolderTreeVO(absolutePath, absolutePath);
+            root.setOpened(true);
             result.add(directoryTreeService.getDirectoryTree(root));
         } catch (Exception e) {
             logger.error(e.getMessage(), e);

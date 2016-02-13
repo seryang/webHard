@@ -15,19 +15,6 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 
-//	@Bean
-//	public HttpMessageConverter<String> responseBodyConverter() {
-//		return new StringHttpMessageConverter(Charset.forName("UTF-8"));
-//	}
-//
-//	@Bean
-//	public Filter characterEncodingFilter() {
-//		CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
-//		characterEncodingFilter.setEncoding("UTF-8");
-//		characterEncodingFilter.setForceEncoding(true);
-//		return characterEncodingFilter;
-//	}
-
 	@Bean
 	public RestTemplate restTemplate(){	return new RestTemplate(); }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:pages="http://pagesdialect.sourceforge.net" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -80,13 +80,14 @@
                     </ul>
                     <div class="col-lg-6">
                         <div class="input-group">
-                            <form action="moveFolder" method="get">
-                                <input type="text" value="DataStore/" name="path" class="form-control" placeholder="Search for..."/>
+                            <form action="shortCut" method="get">
+                                <input type="text" id="search" name="path" class="form-control" placeholder="Search for..."/>
                             </form>
                             <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">Go!</button>
-                      </span>
+                               <button class="btn btn-default" type="button">Go!</button>
+                            </span>
                         </div>
+                        <div align="right" id="pathCheck"></div>
                     </div>
                 </nav>
             </div>
@@ -97,7 +98,7 @@
                     <p><b> [PATH] &nbsp;&nbsp;&nbsp;</b> <i th:text=" ${path}"/> </p>
                 </div>
                 <div class="alert alert-warning" role="alert">
-                    <p><b> [COUNT <b th:text="${list.dirSize}+${list.fileSize}"/>]</b> <img src="img/folder.jpg"/> <b th:text="${list.dirSize}"/> <img src="img/file.jpg"/>  <b th:text="${list.fileSize}"/></p>
+                    <p><b> [COUNT] </b> <img src="img/folder.jpg"/> <b th:text="${list.dirSize}"/> <img src="img/file.jpg"/>  <b th:text="${list.fileSize}"/> &nbsp;&nbsp;&nbsp; (<b th:text="${list.dirSize}+${list.fileSize}"/>)</p>
                 </div>
                 <div class="templatemo-flex-row flex-content-row templatemo-overflow-hidden">
                     <!-- overflow hidden for iPad mini landscape view-->
@@ -106,6 +107,7 @@
                             <div class="templatemo-flex-row flex-content-row">
                                 <table id="showFile">
                                     <colgroup>
+                                        <col width="50"/>
                                         <col width="500"/>
                                         <col width="300"/>
                                         <col width="300"/>
@@ -113,31 +115,41 @@
                                         <col width="200"/>
                                     </colgroup>
                                     <thead>
-                                    <tr>
-                                        <th>NAME</th>
-                                        <th>SIZE</th>
-                                        <th>DATE</th>
-                                        <th>TYPE</th>
-                                        <th>MEMO</th>
-                                    </tr>
-                                    <tr class="showList" th:if="${parentDirectory} != ''">
-                                        <td class="folder-list" style="cursor:pointer" th:value="${parentDirectory}"><img src="img/root.png" th:text=".." /></td>
-                                    </tr>
-                                        <tr class="showList" th:each="list : ${list.directoryList}">
-                                            <td class="folder-list" style="cursor:pointer" th:value="${list.directoryPath}"><input type="checkbox" th:value="${list.directoryName}"/><img src="img/folder.jpg" th:text="${list.directoryName}" /></td>
+                                        <tr>
+                                            <th></th>
+                                            <th>NAME</th>
+                                            <th>SIZE</th>
+                                            <th>DATE</th>
+                                            <th>TYPE</th>
+                                            <th>MEMO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="showList" th:if="${parentDirectory} != ''">
+                                            <td></td>
+                                            <td class="folder-list" style="cursor:pointer" th:value="${parentDirectory}"><img src="img/root.png" th:text=".." /></td>
                                             <td></td>
                                             <td></td>
-                                            <td>폴더</td>
+                                            <td></td>
                                             <td></td>
                                         </tr>
-                                    <tr class="showList" th:each="list : ${list.fileList}">
-                                        <td class="file-list" style="cursor:pointer" th:value="${list.fileName}"><input type="checkbox" th:value="${list.fileName}"/><img src="img/file.jpg" th:text="${list.fileName}" /></td>
-                                            <td th:text="${list.fileSize} +  KB"/>
+                                        <tr class="showList" th:each="list : ${list.directoryList}">
+                                            <td><input type="radio" name="checkData" th:value="${list.directoryName}"/></td>
+                                            <td class="folder-list" th:value="${list.directoryPath}" style="cursor:pointer"><img src="img/folder.jpg" th:text="${list.directoryName}" /></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="showList" th:each="list : ${list.fileList}">
+                                            <td><input type="radio" name="checkData" th:value="${list.fileName}"/></td>
+                                            <td class="file-list" th:value="${list.fileName}" style="cursor: pointer;"><img src="img/file.jpg" th:text="${list.fileName}" /></td>
+                                            <td th:text="${list.fileSize} + KB"/>
                                             <td th:text="${list.fileDate}"/>
                                             <td th:text="${list.fileType}"/>
-                                           <td/>
-                                    </tr>
-                                    </thead>
+                                            <td/>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
@@ -191,6 +203,29 @@
         // Folder Tree - Move Folder
         $('#folderTree').on("changed.jstree", function (e, data) {
             location.href="moveFolder?path="+data.selected;
+        });
+
+
+        // ShortCut - Vlid Check
+        $("#search").keyup(function() {
+            $.ajax({
+                url : "checkPath",
+                type : "post",
+                dataType : "text",
+                data : "path="+$("#search").val(),
+                success : function(data) {
+                    if(data == "Not found."){
+                        $("#pathCheck").html(data);
+                        $("#pathCheck").css("color", "#b22222");
+                    }else{
+                        $("#pathCheck").html(data);
+                        $("#pathCheck").css("color", "#708090");
+                    }
+                },
+                error : function(err) {
+                    alert("[ERROR] 다시 시도해주세요.");
+                }
+            });
         });
     });
 

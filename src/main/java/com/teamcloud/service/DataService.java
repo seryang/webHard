@@ -26,39 +26,28 @@ public class DataService {
 
 	// 현재 Path의 (파일 / 폴더) 리스트 보여주기
 	public Map<String, Object> getFile_Folder_List(String dirPath) throws Exception{
-		System.out.println("보여줄 리스트의 경로 : " + dirPath);
-
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String [] allFile_Folder_List = new File(dirPath).list();
 
 		List<DirectoryVO> directoryList = new ArrayList<DirectoryVO>();
 		List<FileVO> fileList = new ArrayList<FileVO>();
-
-		String [] allFile_Folder_List = new File(dirPath).list();
-
 		File checkFile;
+
 		for(String go : allFile_Folder_List){
-
 			checkFile = new File(dirPath + "/" + go);
-
 			if(checkFile.isDirectory()){
 				DirectoryVO dvo = new DirectoryVO();
-				// 디렉토리 이름
-				dvo.setDirectoryName(checkFile.getName());
-				// 디렉토리 경로
-				dvo.setDirectoryPath(checkFile.getPath());
+				dvo.setDirectoryName(checkFile.getName()); // 디렉토리 이름
+				dvo.setDirectoryPath(checkFile.getPath()); // 디렉토리 경로
 				directoryList.add(dvo);
 			}else{
 				FileVO fvo = new FileVO();
-				// 파일 이름
-				fvo.setFileName(checkFile.getName());
-				// 파일 날짜
-				fvo.setFileDate(dateFormat.format(new Date(checkFile.lastModified())));
-				// 파일 사이즈
-				fvo.setFileSize(checkFile.length());
-				// 파일 타입
+				fvo.setFileName(checkFile.getName()); // 파일 이름
+				fvo.setFileDate(dateFormat.format(new Date(checkFile.lastModified()))); // 파일 날짜
+				fvo.setFileSize(checkFile.length()); // 파일 사이즈
 				String [] splitData = checkFile.getName().split("\\.");
 				String fileType = splitData[ (splitData .length) - 1 ];
-				fvo.setFileType(fileType);
+				fvo.setFileType(fileType); // 파일 타입
 				fileList.add(fvo);
 			}
 		}
@@ -74,24 +63,18 @@ public class DataService {
 	public boolean addFolder(String parentFolder, String childFolder) throws Exception {
 		boolean flag = false;
 		String fullPath = parentFolder+"/"+childFolder;
-		System.out.println("생성할 폴더 : " + fullPath);
-		File dir = new File(fullPath);
 
+		File dir = new File(fullPath);
 		if(!dir.exists()){
 			flag = dir.mkdir();
 		}
-
 		return flag;
 	}
 
 	// 파일 업로드
 	public void upload(MultipartFile uploadFile, String dirPath) throws Exception {
-		System.out.println("저장될 파일의 폴더 : " + dirPath);
-
 		String filename = uploadFile.getOriginalFilename();
 		String filepath = Paths.get(dirPath, filename).toString();
-
-		System.out.println("폴더명 + 파일명 : " + filepath);
 
 		BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File(filepath)));
 		stream.write(uploadFile.getBytes());
@@ -100,15 +83,10 @@ public class DataService {
 
 	// 파일 다운로드
 	public void download(String path, String fileName, HttpServletResponse response) throws Exception {
-		System.out.println("다운로드 할 path : " + path);
-		System.out.println("다운로드 할 파일명 : " + fileName);
-
 		String downloadPath = path+"/"+fileName;
-
-		fileName = new String(fileName.getBytes("UTF-8"), "ISO-8859-1");
-
-		System.out.println("풀 경로 : " + downloadPath);
+		fileName = new String(fileName.getBytes("UTF-8"), "ISO-8859-1"); // 인코딩
 		byte fileByte[] = FileUtils.readFileToByteArray(new File(downloadPath));
+
 		response.setContentType("application/octet-stream");
 		response.setContentLength(fileByte.length);
 		response.setHeader("Content-Disposition", "attachment; fileName=\"" + fileName + "\";");
@@ -120,14 +98,12 @@ public class DataService {
 
 	// 상위 폴더의 PATH 설정
 	public String getParentDirectory(String movePath) throws Exception{
-		String parentDirectory;
-		if(environment.getRequiredProperty("ABSOLUTE_PATH").equals(movePath)){
-			parentDirectory = "";
-		}else{
+		String parentDirectory = "";
+
+		if(environment.getRequiredProperty("ABSOLUTE_PATH").equals(movePath) == false){
 			File file = new File(movePath);
 			parentDirectory = file.getParent();
 		}
-		System.out.println("상위 폴더 : " + parentDirectory);
 		return parentDirectory;
 	}
 }

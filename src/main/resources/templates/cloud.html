@@ -12,12 +12,6 @@
     <link href="css/templatemo-style.css" rel="stylesheet"/>
     <link href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.0.9/themes/default/style.min.css" rel="stylesheet"/>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
     <style>
         .jstree-anchor {
             color : lightgray !important;
@@ -47,9 +41,8 @@
             <li><a href="/logout">Logout</a></li>
             <hr/>
         </ul>
-        <!--폴더 리스트 -->
-        <!--<ul class="tree" style="margin-left: 15px;">-->
-        <!--</ul>-->
+
+
         <div id="folderTree"></div>
     </div>
     <!-- Main content -->
@@ -87,8 +80,8 @@
                                <button class="btn btn-default" type="button">Go!</button>
                             </span>
                         </div>
-                        <div align="right" id="pathCheck"></div>
                     </div>
+                    <div align="right" id="pathCheck"></div>
                 </nav>
             </div>
         </div>
@@ -140,6 +133,7 @@
                                         <td th:text="${list.size}"/>
                                         <td th:text="${list.date}"/>
                                         <td th:text="${list.type}"/>
+                                        <td class="modal_memo" th:value="${list.file}" style="cursor: pointer;">Memo!!</td>
                                         <td/>
                                     </tr>
                                     </tbody>
@@ -175,15 +169,70 @@
     </div>
 </div>
 
+<!-- start: modal fade -->
+<div class="modal fade">
+    <div class="header">메모보기</div>
+    <div class="content">...</div>
+    <input type="text" placeholder="write comment" class="write"></input>
+</div>
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
 <!-- JS -->
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="js/fileStream.js"></script>
+
 <!-- jQuery -->
 <script src="js/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="js/templatemo-script.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jstree/3.0.9/jstree.min.js"></script>
+
+<!-- Modal -->
+<script src="js/jquery.modal.js" type="text/javascript"></script>
+<link href="css/jquery.modal.css" rel="stylesheet" type="text/css" />
+
 <script th:inline="javascript" type="text/javascript">
     $(document).ready(function() {
+
+        /*
+         * 기사보기 (모달)
+         */
+        $(".modal_memo").click(function(){
+            var type = $(this).attr("value");
+            var path;
+            if(type == "true"){
+                // file
+                type = "file";
+                path = $(this).siblings(".file-list").attr("value");
+            }else{
+                // folder
+                type="folder";
+                path = $(this).siblings(".folder-list").attr("value");
+            }
+
+            /*<![CDATA[*/
+            $.ajax({
+                url : "memo",
+                type : "get",
+                data : "path="+ path +"&type=" +type,
+                success : function(data) {
+                    alert("wow");
+                    $('.modal').modal();
+                },
+                error : function(err) {
+                    alert("[ERROR] 다시 시도해주세요.");
+                }
+            });
+            /*]]>*/
+
+        });
+
         $("#upload-file-input").on("change", valid_fileCheck);
 
         // File Download
@@ -221,7 +270,9 @@
         $('.page-num').click(function () {
             var pageNum = $(this).text();
             var sessionPath = [[${session.path}]];
-            goToPage(sessionPath, pageNum);
+            /*<![CDATA[*/
+            location.href = "moveFolder?path=" + sessionPath + "&currentPage=" + pageNum;
+            /*]]>*/
         });
 
         // ShortCut - Vlid Check

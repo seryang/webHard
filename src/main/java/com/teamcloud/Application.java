@@ -1,5 +1,6 @@
 package com.teamcloud;
 
+import com.teamcloud.model.MemoDao;
 import com.teamcloud.service.DataService;
 import com.teamcloud.service.DirectoryTreeService;
 import com.teamcloud.service.OauthService;
@@ -30,4 +31,9 @@ public class Application {
 
 	@Bean
 	public DirectoryTreeService directoryTreeService() { return new DirectoryTreeService(); }
+
+	@Bean
+	public MemoDao memoDao(){
+		return new MemoDao();
+	}
 }

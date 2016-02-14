@@ -1,8 +1,7 @@
 package com.teamcloud.service;
 
-import com.teamcloud.model.vo.DirectoryVO;
-import com.teamcloud.model.vo.FileAware;
-import com.teamcloud.model.vo.FileVO;
+import com.teamcloud.model.MemoDao;
+import com.teamcloud.model.vo.*;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
@@ -22,19 +21,20 @@ import java.util.*;
 @PropertySource( value = { "classpath:application.properties" })
 public class DataService {
 
-
-	private static final int PAGE_SIZE = 10;
 	@Autowired
 	private Environment environment;
 
-	// 현재 Path의 (파일 / 폴더) 리스트 보여주기
+	@Autowired
+	private MemoDao memoDao;
+
+	// 현재 Path의 (파일 / 폴더 / 페이지) 리스트 보여주기
 	public Map<String, Object> getFileFolderList(String dirPath, int currentPage) throws Exception{
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String [] fileFolderList = new File(dirPath).list();
 
-		List<DirectoryVO> directoryList = new ArrayList<DirectoryVO>();
-		List<FileVO> fileList = new ArrayList<FileVO>();
 		List<FileAware> dataList = new ArrayList<FileAware>();
+		int dirSize = 0;
+		int fileSize = 0;
 		File checkFile;
 
 		for(String go : fileFolderList){
@@ -43,8 +43,8 @@ public class DataService {
 				DirectoryVO dvo = new DirectoryVO();
 				dvo.setDirectoryName(checkFile.getName()); // 디렉토리 이름
 				dvo.setDirectoryPath(checkFile.getPath()); // 디렉토리 경로
-				directoryList.add(dvo);
 				dataList.add(dvo);
+				dirSize++;
 			}else{
 				FileVO fvo = new FileVO();
 				fvo.setFileName(checkFile.getName()); // 파일 이름
@@ -53,30 +53,34 @@ public class DataService {
 				String [] splitData = checkFile.getName().split("\\.");
 				String fileType = splitData[ (splitData .length) - 1 ];
 				fvo.setFileType(fileType); // 파일 타입
-				fileList.add(fvo);
 				dataList.add(fvo);
+				fileSize++;
 			}
 		}
 
-		int pageList = fileFolderList.length / PAGE_SIZE;
-		if( (fileFolderList.length % PAGE_SIZE > 0) ){
+		// 페이지 당 보여줄 데이터 사이즈
+		int pageSize = Integer.parseInt(environment.getRequiredProperty("page.size"));
+
+		// 보여줄 페이지
+		int pageList = fileFolderList.length / pageSize;
+		if( (fileFolderList.length % pageSize > 0) ){
 			pageList += 1;
 		}
 
+		// 정렬 ( 폴더 먼저 )
 		Collections.sort(dataList, new Comparator<FileAware>() {
 			@Override
 			public int compare(FileAware o1, FileAware o2) {
 				return o1.isFile() ? 1 : -1;
 			}
 		});
-		dataList = dataList.subList((currentPage - 1) * PAGE_SIZE, Math.min(dataList.size(), currentPage * PAGE_SIZE));
 
+		// 페이지 당 보여줄 (파일,폴더) 쪼개기
+		dataList = dataList.subList((currentPage - 1) * pageSize, Math.min(dataList.size(), currentPage * pageSize));
 
 		Map <String, Object> map = new HashMap<String, Object>();
-		map.put("dirSize", directoryList.size());
-		map.put("fileSize", fileList.size());
-		map.put("fileList",fileList);
-		map.put("directoryList",directoryList);
+		map.put("dirSize", dirSize);
+		map.put("fileSize", fileSize);
 		map.put("pageList", pageList);
 		map.put("dataList", dataList);
 
@@ -129,5 +133,11 @@ public class DataService {
 			parentDirectory = file.getParent();
 		}
 		return parentDirectory;
+	}
+
+	// 메모 Histroy
+	public List<MemoHistoryVO> getMemoList(String path, String uid) throws Exception{
+		MemoVO mvo = memoDao.selectMemoId(path,uid);
+		return memoDao.selectMemoHistoryList(mvo);
 	}
 }

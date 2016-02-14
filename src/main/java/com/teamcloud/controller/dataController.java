@@ -1,6 +1,9 @@
 package com.teamcloud.controller;
 
 import com.teamcloud.model.vo.FolderTreeVO;
+import com.teamcloud.model.vo.MemoHistoryVO;
+import com.teamcloud.model.vo.MemoVO;
+import com.teamcloud.model.vo.UserVO;
 import com.teamcloud.service.DataService;
 import com.teamcloud.service.DirectoryTreeService;
 import org.slf4j.Logger;
@@ -156,5 +159,26 @@ public class DataController {
             result.add(new FolderTreeVO("NO FOLDER", ""));
         }
         return result;
+    }
+
+    // 메모
+    @RequestMapping(value = "/memo")
+    @ResponseBody
+    public List<MemoHistoryVO> memo(@RequestParam("path") String path, @RequestParam("type") String type, HttpSession session) {
+
+        if(type.equals("file")){
+            path = session.getAttribute("path") + "/" + path;
+        }
+
+        List<MemoHistoryVO> list = null;
+
+        try {
+            list = dataService.getMemoList(path, ( ((UserVO)session.getAttribute("userInfo")).getEmail() ) );
+        } catch (Exception e) {
+            logger.error(e.getMessage(), e);
+        }
+
+        logger.info("Controller List : {}, {}, {}", list, path, type);
+        return list;
     }
 }

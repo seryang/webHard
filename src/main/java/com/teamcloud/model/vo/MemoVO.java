@@ -1,10 +1,59 @@
 package com.teamcloud.model.vo;
 
-/**
- * Created by ESTSoft on 2016-02-12.
- */
+import javax.persistence.*;
+
+@Entity
+@Table(name="memo")
 public class MemoVO {
-    private int memo_id;
+    @Id
+    @GeneratedValue // autoincrement
+    @Column(unique = true, nullable = false)
+    private int id;
+
+    @Column
     private String uid;
-    private String file_path;
+
+    @Column
+    private String path;
+
+    public MemoVO(){}
+
+    public MemoVO(String uid, String path) {
+        this.uid = uid;
+        this.path = path;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("MemoVO{");
+        sb.append("id=").append(id);
+        sb.append(", uid='").append(uid).append('\'');
+        sb.append(", path='").append(path).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }

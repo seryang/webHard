@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.yaml.snakeyaml.util.UriEncoder;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -114,7 +115,7 @@ public class DataController {
     @ResponseBody
     public String checkPath(@RequestParam("path") String path, Model model){
         String checkMsg = "Not found.";
-        path = environment.getRequiredProperty("ABSOLUTE_PATH") +"/"+ path;
+        path = environment.getRequiredProperty("absolute.path") +"/"+ path;
 
         try {
             if(new File(path).exists()){
@@ -130,7 +131,7 @@ public class DataController {
     @RequestMapping(value = "/shortCut")
     public String shortCut(@RequestParam("path") String path, Model model,
                            @RequestParam(required = false, defaultValue = "1", value = "currentPage") int currentPage){
-        path = environment.getRequiredProperty("ABSOLUTE_PATH") +"/"+ path;
+        path = environment.getRequiredProperty("absolute.path") +"/"+ path;
 
         try {
             if(new File(path).exists()){
@@ -150,7 +151,7 @@ public class DataController {
     public List<FolderTreeVO> tree() {
         List<FolderTreeVO> result = new ArrayList<FolderTreeVO>();
         try {
-            String absolutePath = environment.getRequiredProperty("ABSOLUTE_PATH");
+            String absolutePath = environment.getRequiredProperty("absolute.path");
             FolderTreeVO root = new FolderTreeVO(absolutePath, absolutePath);
             root.setOpened(true);
             result.add(directoryTreeService.getDirectoryTree(root));
@@ -178,7 +179,66 @@ public class DataController {
             logger.error(e.getMessage(), e);
         }
 
-        logger.info("Controller List : {}, {}, {}", list, path, type);
+        logger.info("Memo List : {}", list);
+
         return list;
+    }
+
+    // 메모 작성
+    @RequestMapping(value ="/writeMemo")
+    @ResponseBody
+    public MemoHistoryVO writeMemo(@RequestParam("path") String path, @RequestParam("type") String type, HttpSession session, @RequestParam("comment") String comment){
+        if(type.equals("file")){
+            path = session.getAttribute("path") + "/" + path;
+        }
+
+        MemoHistoryVO hvo = null;
+
+        try{
+            System.out.println("comment: " + comment);
+            hvo = dataService.addMemo( path, ( ((UserVO)session.getAttribute("userInfo")).getEmail() ), comment);
+
+            logger.info("hvo : {}", hvo);
+        }catch(Exception e){
+            logger.error(e.getMessage(), e);
+        }
+        return hvo;
+    }
+
+    // 메모 삭제
+    @RequestMapping(value ="/removeMemo")
+    @ResponseBody
+    public String removeMemo(@RequestParam("no") int no){
+        String checkMsg = "삭제에 실패하였습니다.";
+        try{
+            dataService.removeMemo(no);
+            checkMsg = "메모가 삭제되었습니다.";
+        }catch(Exception e){
+            logger.error(e.getMessage(), e);
+        }
+        return checkMsg;
+    }
+
+    // 메모 수정
+    @RequestMapping(value ="/modifyMemo")
+    @ResponseBody
+    public MemoHistoryVO modifyMemo(@RequestParam("no")int no, @RequestParam("comment") String comment){
+        MemoHistoryVO hvo = null;
+        try{
+            hvo = dataService.modifyMemo(no, comment);
+            logger.info("hvo : {}", hvo);
+        }catch(Exception e){
+            logger.error(e.getMessage(), e);
+        }
+        return hvo;
+    }
+
+    // 페이지당 보여줄 list 개수 변경
+    @RequestMapping(value ="/changePage")
+    @ResponseBody
+    public String changePagingCount(@RequestParam("count")int count){
+        dataService.pagingSize = count;
+        String checkMsg = "페이지당 보여줄 데이터의 수가 " + count + "로 변경되었습니다.";
+        return checkMsg;
     }
 }

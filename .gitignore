@@ -7,7 +7,12 @@
 # eclipse specific git ignore
 *.pydevproject
 .project
+.idea/*
 .metadata
+.settings
+Cloud/*
+.gradle
+*.DS_Store
 bin/**
 	 tmp/**
 	 tmp/**/*
@@ -19,7 +24,6 @@ bin/**
 			  .classpath
 			  .settings/
 			  .loadpath
-
 # External tool builders
 .externalToolBuilders/
 

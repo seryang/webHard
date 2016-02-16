@@ -18,7 +18,7 @@ public class MemoVO {
 
     public MemoVO(){}
 
-    public MemoVO(String uid, String path) {
+    public MemoVO(String path, String uid) {
         this.uid = uid;
         this.path = path;
     }

@@ -81,7 +81,7 @@
                             </span>
                         </div>
                     </div>
-                    <div align="right" id="pathCheck"></div>
+                    <div id="pathCheck"></div>
                 </nav>
             </div>
         </div>
@@ -91,7 +91,11 @@
                     <p><b> [PATH] &nbsp;&nbsp;&nbsp;</b> <i th:text=" ${path}"/> </p>
                 </div>
                 <div class="alert alert-warning" role="alert">
-                    <p><b> [COUNT] </b> <img src="img/folder.jpg"/> <b th:text="${list.dirSize}"/> <img src="img/file.jpg"/>  <b th:text="${list.fileSize}"/> &nbsp;&nbsp;&nbsp; (<b th:text="${list.dirSize}+${list.fileSize}"/>)</p>
+                    <p>
+                        <b> [INFO] </b> <img src="img/folder.jpg" title="Folder"/> <b th:text="${list.dirSize}"/> <img src="img/file.jpg" title="File"/>  <b th:text="${list.fileSize}"/> &nbsp;&nbsp;&nbsp; (<b th:text="${list.dirSize}+${list.fileSize}"/>)
+                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                        <b> [PAGE] </b> 페이지당 보여줄 Data의 개수 : <input id="changeCountValue" type="number" min="1" th:value="${list.pagingSize}" th:max="${list.dirSize}+${list.fileSize}"/> <img src="img/check.png" title="PAGE Setting" style="cursor:pointer;" onclick="changePage()"/>
+                    </p>
                 </div>
                 <div class="templatemo-flex-row flex-content-row templatemo-overflow-hidden">
                     <!-- overflow hidden for iPad mini landscape view-->
@@ -133,7 +137,7 @@
                                         <td th:text="${list.size}"/>
                                         <td th:text="${list.date}"/>
                                         <td th:text="${list.type}"/>
-                                        <td class="modal_memo" th:value="${list.file}" style="cursor: pointer;">Memo!!</td>
+                                        <td class="modal_memo" th:value="${list.file}" style="cursor: pointer;"><img src="img/memo.jpg"/> </td>
                                         <td/>
                                     </tr>
                                     </tbody>
@@ -150,9 +154,9 @@
                             </li>
 
                             <li th:class="${ ( (param.currentPage != null) and (param.currentPage[0] == page.toString()))
-                            or ( (param.currentPage == null) and (page == 1) ) } ? 'active' : ''"
+                                                                              or ( (param.currentPage == null) and (page == 1) ) } ? 'active' : ''"
                                 th:each="page : ${#numbers.sequence( 1, list.pageList)}">
-                                <a th:text="${page}" class="page-num" style="cursor:pointer;"/>
+                                <a th:if="${page != 0}" th:text="${page}" class="page-num" style="cursor:pointer;"/>
                             </li>
 
                             <li>
@@ -169,11 +173,14 @@
     </div>
 </div>
 
-<!-- start: modal fade -->
-<div class="modal fade">
-    <div class="header">메모보기</div>
-    <div class="content">...</div>
-    <input type="text" placeholder="write comment" class="write"></input>
+<!-- modal fade -->
+<div class="modal fade" >
+    <div class="header" align="center" th:text="'['+${userInfo.name} + '님의 메모 History]'"/>
+    <div class="content" align="center"></div>
+    <form align="center" id="memoform" onSubmit="return false;">
+        <input type="text" id="memocontent" placeholder="write comment here! "/>
+        <input type="submit"  class="ctn ctn-primary" value="write"/>
+    </form>
 </div>
 
 
@@ -200,18 +207,16 @@
 <script th:inline="javascript" type="text/javascript">
     $(document).ready(function() {
 
-        /*
-         * 기사보기 (모달)
-         */
+        var type;
+        var path;
+
+        // 메모 (모달)
         $(".modal_memo").click(function(){
-            var type = $(this).attr("value");
-            var path;
+            type = $(this).attr("value");
             if(type == "true"){
-                // file
                 type = "file";
                 path = $(this).siblings(".file-list").attr("value");
             }else{
-                // folder
                 type="folder";
                 path = $(this).siblings(".folder-list").attr("value");
             }
@@ -221,17 +226,50 @@
                 url : "memo",
                 type : "get",
                 data : "path="+ path +"&type=" +type,
+                dataType : "json",
                 success : function(data) {
-                    alert("wow");
-                    $('.modal').modal();
+                    $(".content").empty();
+                    if(data.length == 0){
+                        $(".content").append("<b><br/>작성된 메모가 없습니다.<br/><hr/></b>");
+                    }else{
+                        $(data).each(function() {
+                            var d = new Date(this.regDate);
+                            $(".content").append("<p value='"+this.no+"'><b>" + this.memoContent + "</b>  (" + d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate() + " " + d.getHours() +":"+ d.getMinutes()+":"+ d.getSeconds()+")   <img title='삭제' src='img/remove.png' style='cursor:pointer;' onclick='removeMemo(this)'/> <img title='수정' src='img/modify.png' style='cursor:pointer;' onclick='modifyMemo(this)'/></p>");
+                        });
+                    }
+                    $(".modal").modal();
                 },
                 error : function(err) {
                     alert("[ERROR] 다시 시도해주세요.");
                 }
             });
             /*]]>*/
-
         });
+
+        // 메모 작성
+        /*<![CDATA[*/
+        $("#memoform").submit(function() {
+            if($("#memocontent").val())
+                $.ajax({
+                    url : "writeMemo",
+                    type : "post",
+                    dataType : "json",
+                    data: "path=" + path + "&type=" + type + "&comment=" + encodeURIComponent($("#memocontent").val()),
+                    success : function(here) {
+                        alert("메모가 작성되었습니다.");
+                        if($(".content > b").length == 1){
+                            $(".content > b").remove();
+                        }
+                        var da = new Date(here.regDate);
+                        $(".content").append("<p value='"+here.no+"'><b>" + here.memoContent + "</b>(" + da.getFullYear() + "-" + da.getMonth() + "-" + da.getDate() + " " + da.getHours() +":"+ da.getMinutes()+":"+ da.getSeconds()+") &nbsp;&nbsp;  <img title='삭제' src='img/remove.png' style='cursor:pointer;' onclick='removeMemo(this)'/> <img title='수정' src='img/modify.png' style='cursor:pointer;' onclick='modifyMemo(this)'/></p>");
+                        $("#memocontent").attr("value","");
+                    },
+                    error : function(err) {
+                        alert("[ERROR] 다시 시도해주세요.");
+                    }
+                });
+        });
+        /*]]>*/
 
         $("#upload-file-input").on("change", valid_fileCheck);
 
@@ -297,6 +335,73 @@
             });
         });
     });
+
+    // 메모 삭제
+    function removeMemo(target){
+        var no = $(target).parent().attr("value");
+        $.ajax({
+            url : "removeMemo",
+            type : "post",
+            dataType : "text",
+            data : "no="+no,
+            success : function(data) {
+                alert(data);
+                $(target).parent().remove();
+                if( $(".content > p").length == 0 ){
+                    $(".content").append("<b><br/>작성된 메모가 없습니다.<br/><hr/></b>");
+                }
+            },
+            error : function(err) {
+                alert("[ERROR] 다시 시도해주세요.");
+            }
+        });
+    }
+
+    // 메모 수정
+    /*<![CDATA[*/
+    function modifyMemo(target){
+        var no = $(target).parent().attr("value");
+        var newMemo = prompt('메모를 변경하세요.', $(target).siblings("b").text());
+        $.ajax({
+            url : "modifyMemo",
+            type : "post",
+            data: "no=" + no + "&comment=" + newMemo,
+            success : function(here) {
+                alert("메모가 수정되었습니다.");
+                $(target).parent().remove();
+                var da = new Date(here.regDate);
+                $(".content").append("<p value='"+here.no+"'><b>" + here.memoContent + "</b>(" + da.getFullYear() + "-" + da.getMonth() + "-" + da.getDate() + " " + da.getHours() +":"+ da.getMinutes()+":"+ da.getSeconds()+") &nbsp;&nbsp;  <img title='삭제' src='img/remove.png' style='cursor:pointer;' onclick='removeMemo(this)'/> <img title='수정' src='img/modify.png' style='cursor:pointer;' onclick='modifyMemo(this)'/></p>");
+            },
+            error : function(err) {
+                alert("[ERROR] 다시 시도해주세요.");
+            }
+        });
+    }
+    /*]]>*/
+
+    // 페이징 수 변경
+    function changePage(){
+        var count = parseInt($("#changeCountValue").val());
+        /*<![CDATA[*/
+        if(count <= 0){
+            /*]]>*/
+            alert("유효하지 않는 범위입니다.");
+        }else {
+            $.ajax({
+                url: "changePage",
+                type: "post",
+                dataType: "text",
+                data: "count=" + count,
+                success: function (data) {
+                    alert(data);
+                    location.reload();
+                },
+                error: function (err) {
+                    alert("[ERROR] 다시 시도해주세요.");
+                }
+            });
+        }
+    }
 
     // HTML5 - Drag and Drop Upload
     $(document).on('dragenter', function (e){

@@ -40,7 +40,7 @@ public class LoginController {
 
 		try {
 			if(session.getAttribute("userInfo") != null){
-				String absolutePath = environment.getRequiredProperty("ABSOLUTE_PATH");
+				String absolutePath = environment.getRequiredProperty("absolute.path");
 				model.addAttribute("path", absolutePath);
 				model.addAttribute("list", dataService.getFileFolderList(absolutePath, currentPage));
 				model.addAttribute("parentDirectory", "");

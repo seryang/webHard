@@ -27,6 +27,9 @@ public class DataService {
 	@Autowired
 	private MemoDao memoDao;
 
+	// 페이지 당 보여줄 데이터 사이즈
+	public static int pagingSize = 15;
+
 	// 현재 Path의 (파일 / 폴더 / 페이지) 리스트 보여주기
 	public Map<String, Object> getFileFolderList(String dirPath, int currentPage) throws Exception{
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -58,12 +61,9 @@ public class DataService {
 			}
 		}
 
-		// 페이지 당 보여줄 데이터 사이즈
-		int pageSize = Integer.parseInt(environment.getRequiredProperty("page.size"));
-
 		// 보여줄 페이지
-		int pageList = fileFolderList.length / pageSize;
-		if( (fileFolderList.length % pageSize > 0) ){
+		int pageList = fileFolderList.length / pagingSize;
+		if( (fileFolderList.length % pagingSize > 0) ){
 			pageList += 1;
 		}
 
@@ -76,14 +76,14 @@ public class DataService {
 		});
 
 		// 페이지 당 보여줄 (파일,폴더) 쪼개기
-		dataList = dataList.subList((currentPage - 1) * pageSize, Math.min(dataList.size(), currentPage * pageSize));
+		dataList = dataList.subList((currentPage - 1) * pagingSize, Math.min(dataList.size(), currentPage * pagingSize));
 
 		Map <String, Object> map = new HashMap<String, Object>();
 		map.put("dirSize", dirSize);
 		map.put("fileSize", fileSize);
 		map.put("pageList", pageList);
 		map.put("dataList", dataList);
-
+		map.put("pagingSize", pagingSize);
 		return map;
 	}
 
@@ -128,16 +128,47 @@ public class DataService {
 	public String getParentDirectory(String movePath) throws Exception{
 		String parentDirectory = "";
 
-		if(environment.getRequiredProperty("ABSOLUTE_PATH").equals(movePath) == false){
+		if(environment.getRequiredProperty("absolute.path").equals(movePath) == false){
 			File file = new File(movePath);
 			parentDirectory = file.getParent();
 		}
 		return parentDirectory;
 	}
 
-	// 메모 Histroy
+	// 메모 Histroy List
 	public List<MemoHistoryVO> getMemoList(String path, String uid) throws Exception{
 		MemoVO mvo = memoDao.selectMemoId(path,uid);
 		return memoDao.selectMemoHistoryList(mvo);
+	}
+
+	// 메모 삽입
+	public MemoHistoryVO addMemo(String path, String uid, String comment) throws Exception{
+		// select 해서 id 가져오기
+		MemoVO mvo = memoDao.selectMemoId(path,uid);
+		System.out.println("mvo ; " + mvo);
+
+		// id가 없다면
+		if(mvo == null) {
+			memoDao.insertMemo(new MemoVO(path, uid)); // Memo테이블에 path와 , uid 삽입
+			mvo = memoDao.selectMemoId(path, uid); // MemoID 가져오기
+		}
+		MemoHistoryVO hvo = new MemoHistoryVO(mvo, comment,  new Date(System.currentTimeMillis()) );
+		memoDao.insertMemoHistory(hvo); // History 테이블에 MemoID, memo_content, reg_date 삽입
+
+		return hvo;
+	}
+
+	// 메모 삭제
+	public void removeMemo(int no) throws Exception{
+		memoDao.deleteMemo(no);
+	}
+
+	// 메모 수정
+	public MemoHistoryVO modifyMemo(int no, String comment) throws Exception{
+		MemoHistoryVO hvo = memoDao.selectMemoHistoryId(no);
+		hvo.setMemoContent(comment);
+		hvo.setRegDate(new Date(System.currentTimeMillis()));
+		memoDao.updateMemoHistory(hvo);
+		return hvo;
 	}
 }

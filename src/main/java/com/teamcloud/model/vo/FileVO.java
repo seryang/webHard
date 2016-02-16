@@ -1,17 +1,21 @@
 package com.teamcloud.model.vo;
 
-public class FileVO {
+public class FileVO implements FileAware{
+
+	private int id;
 	private String fileName;
-	private String fileSize;
-	private String fileModify;
+	private long fileSize;
+	private String fileDate;
 	private String fileType;
-	
-	public FileVO(String fileName, String fileSize, String fileModify, String fileType) {
-		super();
-		this.fileName = fileName;
-		this.fileSize = fileSize;
-		this.fileModify = fileModify;
-		this.fileType = fileType;
+
+	public FileVO(){}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getFileName() {
@@ -22,20 +26,20 @@ public class FileVO {
 		this.fileName = fileName;
 	}
 
-	public String getFileSize() {
+	public long getFileSize() {
 		return fileSize;
 	}
 
-	public void setFileSize(String fileSize) {
+	public void setFileSize(long fileSize) {
 		this.fileSize = fileSize;
 	}
 
-	public String getFileModify() {
-		return fileModify;
+	public String getFileDate() {
+		return fileDate;
 	}
 
-	public void setFileModify(String fileModify) {
-		this.fileModify = fileModify;
+	public void setFileDate(String fileDate) {
+		this.fileDate = fileDate;
 	}
 
 	public String getFileType() {
@@ -48,9 +52,42 @@ public class FileVO {
 
 	@Override
 	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("FileVO [fileName=").append(fileName).append(", fileSize=").append(fileSize)
-				.append(", fileModify=").append(fileModify).append(", fileType=").append(fileType).append("]");
-		return builder.toString();
+		return "FileVO{" +
+				"fileName='" + fileName + '\'' +
+				", fileSize=" + fileSize +
+				", fileDate='" + fileDate + '\'' +
+				", fileType='" + fileType + '\'' +
+				'}';
 	}
+
+	@Override
+	public boolean isFile() {
+		return true;
+	}
+
+	@Override
+	public String getName() {
+		return getFileName();
+	}
+
+	@Override
+	public String getPath() {
+		return "";
+	}
+
+	@Override
+	public String getSize() {
+		return getFileSize() + " KB";
+	}
+
+	@Override
+	public String getDate() {
+		return getFileDate();
+	}
+
+	@Override
+	public String getType() {
+		return getFileType();
+	}
+
 }

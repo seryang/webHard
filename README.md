@@ -1,4 +1,4 @@
-WebShell [ Data Storage ] 
+WebShell [ Data Storage ] v 1.0.0
 
 - ESTsoft corp. Pilot Project
 

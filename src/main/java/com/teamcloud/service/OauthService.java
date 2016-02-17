@@ -43,7 +43,7 @@ public class OauthService {
 		
 		UserVO userInfo = new UserVO( userJson.getString("email"),
 									  userJson.getString("name"), 
-									  userJson.getString("profile_image").replace(".jpg", "_80x80.jpg"),
+									  userJson.getString("profile_image").replace(".jpg", "_80x80.jpg").replace(".gif", "_80x80.gif").replace(".png", "_80x80.png").replace(".bmp", "_80x80.bmp"),
 									  userJson.getJSONArray("teams").getJSONObject(0).getJSONObject("department").getString("name")
 									  );
 		return userInfo;

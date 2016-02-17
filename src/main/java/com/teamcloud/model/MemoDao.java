@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Date;
 import java.util.List;
 
 @Transactional
@@ -27,7 +26,6 @@ public class MemoDao {
 
     // [Memo Table] - Path에 맞는 Memo ID 구하기
     public MemoVO selectMemoId(String path, String uid) throws Exception{
-        System.out.println("path : " + path + " / uid : " + uid);
         Session session = getSession();
         return (MemoVO) session.createCriteria(MemoVO.class).add( Restrictions.eq("uid", uid)).add(Restrictions.eq("path", path)).uniqueResult();
     }
@@ -35,9 +33,7 @@ public class MemoDao {
     // [MemoHistory Table] - Memo ID를 참조하는 MemoHistory 리스트 가져오기
     public List<MemoHistoryVO> selectMemoHistoryList(MemoVO id) throws Exception {
         Session session = getSession();
-        System.out.println("id : " + id);
-        List<MemoHistoryVO> list = session.createCriteria(MemoHistoryVO.class).add(Restrictions.eq("memoId", id)).list();
-        return list;
+        return session.createCriteria(MemoHistoryVO.class).add(Restrictions.eq("memoId", id)).list();
     }
 
     // [Memo Table]  - 데이터 삽입
@@ -68,7 +64,6 @@ public class MemoDao {
     // [MemoHistory Table] - MemoHistory ID로 MemoHistory 객체 select
     public MemoHistoryVO selectMemoHistoryId(int no) throws Exception {
         Session session = getSession();
-        MemoHistoryVO hvo = (MemoHistoryVO) session.createCriteria(MemoHistoryVO.class).add(Restrictions.eq("no", no)).uniqueResult();
-        return hvo;
+        return (MemoHistoryVO) session.createCriteria(MemoHistoryVO.class).add(Restrictions.eq("no", no)).uniqueResult();
     }
 }

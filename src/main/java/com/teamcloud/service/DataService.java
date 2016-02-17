@@ -36,12 +36,14 @@ public class DataService {
 		String [] fileFolderList = new File(dirPath).list();
 
 		List<FileAware> dataList = new ArrayList<FileAware>();
+
 		int dirSize = 0;
 		int fileSize = 0;
-		File checkFile;
 
 		for(String go : fileFolderList){
-			checkFile = new File(dirPath + "/" + go);
+
+			File checkFile = new File(dirPath + "/" + go);
+
 			if(checkFile.isDirectory()){
 				DirectoryVO dvo = new DirectoryVO();
 				dvo.setDirectoryName(checkFile.getName()); // 디렉토리 이름
@@ -93,9 +95,11 @@ public class DataService {
 		String fullPath = parentFolder+"/"+childFolder;
 
 		File dir = new File(fullPath);
+
 		if(!dir.exists()){
 			flag = dir.mkdir();
 		}
+
 		return flag;
 	}
 
@@ -145,13 +149,13 @@ public class DataService {
 	public MemoHistoryVO addMemo(String path, String uid, String comment) throws Exception{
 		// select 해서 id 가져오기
 		MemoVO mvo = memoDao.selectMemoId(path,uid);
-		System.out.println("mvo ; " + mvo);
 
 		// id가 없다면
 		if(mvo == null) {
 			memoDao.insertMemo(new MemoVO(path, uid)); // Memo테이블에 path와 , uid 삽입
 			mvo = memoDao.selectMemoId(path, uid); // MemoID 가져오기
 		}
+
 		MemoHistoryVO hvo = new MemoHistoryVO(mvo, comment,  new Date(System.currentTimeMillis()) );
 		memoDao.insertMemoHistory(hvo); // History 테이블에 MemoID, memo_content, reg_date 삽입
 

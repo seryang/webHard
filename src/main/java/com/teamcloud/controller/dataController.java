@@ -2,7 +2,6 @@ package com.teamcloud.controller;
 
 import com.teamcloud.model.vo.FolderTreeVO;
 import com.teamcloud.model.vo.MemoHistoryVO;
-import com.teamcloud.model.vo.MemoVO;
 import com.teamcloud.model.vo.UserVO;
 import com.teamcloud.service.DataService;
 import com.teamcloud.service.DirectoryTreeService;
@@ -14,7 +13,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.yaml.snakeyaml.util.UriEncoder;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -195,7 +193,6 @@ public class DataController {
         MemoHistoryVO hvo = null;
 
         try{
-            System.out.println("comment: " + comment);
             hvo = dataService.addMemo( path, ( ((UserVO)session.getAttribute("userInfo")).getEmail() ), comment);
 
             logger.info("hvo : {}", hvo);

@@ -234,7 +234,7 @@
                     }else{
                         $(data).each(function() {
                             var d = new Date(this.regDate);
-                            $(".content").append("<p value='"+this.no+"'><b>" + this.memoContent + "</b>  (" + d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate() + " " + d.getHours() +":"+ d.getMinutes()+":"+ d.getSeconds()+")   <img title='삭제' src='img/remove.png' style='cursor:pointer;' onclick='removeMemo(this)'/> <img title='수정' src='img/modify.png' style='cursor:pointer;' onclick='modifyMemo(this)'/></p>");
+                            $(".content").append("<p value='"+this.no+"'><b>" + htmlentitiesEncode(this.memoContent) + "</b>  (" + d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate() + " " + d.getHours() +":"+ d.getMinutes()+":"+ d.getSeconds()+")   <img title='삭제' src='img/remove.png' style='cursor:pointer;' onclick='removeMemo(this)'/> <img title='수정' src='img/modify.png' style='cursor:pointer;' onclick='modifyMemo(this)'/></p>");
                         });
                     }
                     $(".modal").modal();
@@ -261,7 +261,7 @@
                             $(".content > b").remove();
                         }
                         var da = new Date(here.regDate);
-                        $(".content").append("<p value='"+here.no+"'><b>" + here.memoContent + "</b>(" + da.getFullYear() + "-" + da.getMonth() + "-" + da.getDate() + " " + da.getHours() +":"+ da.getMinutes()+":"+ da.getSeconds()+") &nbsp;&nbsp;  <img title='삭제' src='img/remove.png' style='cursor:pointer;' onclick='removeMemo(this)'/> <img title='수정' src='img/modify.png' style='cursor:pointer;' onclick='modifyMemo(this)'/></p>");
+                        $(".content").append("<p value='"+here.no+"'><b>" + htmlentitiesEncode(here.memoContent) + "</b>(" + da.getFullYear() + "-" + da.getMonth() + "-" + da.getDate() + " " + da.getHours() +":"+ da.getMinutes()+":"+ da.getSeconds()+") &nbsp;&nbsp;  <img title='삭제' src='img/remove.png' style='cursor:pointer;' onclick='removeMemo(this)'/> <img title='수정' src='img/modify.png' style='cursor:pointer;' onclick='modifyMemo(this)'/></p>");
                         $("#memocontent").attr("value","");
                     },
                     error : function(err) {
@@ -362,20 +362,22 @@
     function modifyMemo(target){
         var no = $(target).parent().attr("value");
         var newMemo = prompt('메모를 변경하세요.', $(target).siblings("b").text());
-        $.ajax({
-            url : "modifyMemo",
-            type : "post",
-            data: "no=" + no + "&comment=" + newMemo,
-            success : function(here) {
-                alert("메모가 수정되었습니다.");
-                $(target).parent().remove();
-                var da = new Date(here.regDate);
-                $(".content").append("<p value='"+here.no+"'><b>" + here.memoContent + "</b>(" + da.getFullYear() + "-" + da.getMonth() + "-" + da.getDate() + " " + da.getHours() +":"+ da.getMinutes()+":"+ da.getSeconds()+") &nbsp;&nbsp;  <img title='삭제' src='img/remove.png' style='cursor:pointer;' onclick='removeMemo(this)'/> <img title='수정' src='img/modify.png' style='cursor:pointer;' onclick='modifyMemo(this)'/></p>");
-            },
-            error : function(err) {
-                alert("[ERROR] 다시 시도해주세요.");
-            }
-        });
+        if(newMemo !=null) {
+            $.ajax({
+                url: "modifyMemo",
+                type: "post",
+                data: "no=" + no + "&comment=" + newMemo,
+                success: function (here) {
+                    alert("메모가 수정되었습니다.");
+                    $(target).parent().remove();
+                    var da = new Date(here.regDate);
+                    $(".content").append("<p value='" + here.no + "'><b>" + htmlentitiesEncode(here.memoContent) + "</b>(" + da.getFullYear() + "-" + da.getMonth() + "-" + da.getDate() + " " + da.getHours() + ":" + da.getMinutes() + ":" + da.getSeconds() + ") &nbsp;&nbsp;  <img title='삭제' src='img/remove.png' style='cursor:pointer;' onclick='removeMemo(this)'/> <img title='수정' src='img/modify.png' style='cursor:pointer;' onclick='modifyMemo(this)'/></p>");
+                },
+                error: function (err) {
+                    alert("[ERROR] 다시 시도해주세요.");
+                }
+            });
+        }
     }
     /*]]>*/
 
@@ -402,6 +404,19 @@
             });
         }
     }
+
+    // 파일 및 폴더 삭제
+    function deleteFile(){
+        alert("공사중");
+    }
+
+
+    // encodes html string
+    /*<![CDATA[*/
+    function htmlentitiesEncode(str) {
+        return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+    /*]]>*/
 
     // HTML5 - Drag and Drop Upload
     $(document).on('dragenter', function (e){

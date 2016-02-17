@@ -1,0 +1,18 @@
+{
+  "name": "bower.json",
+  "description": "WebShell [ Data Storage ] v 1.0.0",
+  "main": "index.js",
+  "authors": [
+    "Seryang <seryang@live.co.kr>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/seryang/webShell",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,7 +1,7 @@
-package com.teamcloud.model;
+package com.cloud.model;
 
-import com.teamcloud.model.vo.MemoHistoryVO;
-import com.teamcloud.model.vo.MemoVO;
+import com.cloud.model.vo.MemoHistoryVO;
+import com.cloud.model.vo.MemoVO;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;

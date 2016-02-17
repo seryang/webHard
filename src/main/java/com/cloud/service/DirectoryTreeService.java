@@ -1,6 +1,6 @@
-package com.teamcloud.service;
+package com.cloud.service;
 
-import com.teamcloud.model.vo.FolderTreeVO;
+import com.cloud.model.vo.FolderTreeVO;
 import org.springframework.stereotype.Service;
 
 import java.io.File;

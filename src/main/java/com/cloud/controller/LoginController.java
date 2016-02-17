@@ -1,8 +1,8 @@
-package com.teamcloud.controller;
+package com.cloud.controller;
 
-import com.teamcloud.model.vo.UserVO;
-import com.teamcloud.service.DataService;
-import com.teamcloud.service.OauthService;
+import com.cloud.model.vo.UserVO;
+import com.cloud.service.DataService;
+import com.cloud.service.OauthService;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,9 +1,9 @@
-package com.teamcloud;
+package com.cloud;
 
-import com.teamcloud.model.MemoDao;
-import com.teamcloud.service.DataService;
-import com.teamcloud.service.DirectoryTreeService;
-import com.teamcloud.service.OauthService;
+import com.cloud.service.DataService;
+import com.cloud.service.DirectoryTreeService;
+import com.cloud.service.OauthService;
+import com.cloud.model.MemoDao;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;

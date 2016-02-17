@@ -1,7 +1,7 @@
-package com.teamcloud.service;
+package com.cloud.service;
 
-import com.teamcloud.model.MemoDao;
-import com.teamcloud.model.vo.*;
+import com.cloud.model.vo.*;
+import com.cloud.model.MemoDao;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
@@ -73,7 +73,7 @@ public class DataService {
 		Collections.sort(dataList, new Comparator<FileAware>() {
 			@Override
 			public int compare(FileAware o1, FileAware o2) {
-				return o1.isFile() ? 1 : -1;
+				return o1.isFile() ^ o2.isFile() == false ? 0 : (o1.isFile() ? 1 : -1) ;
 			}
 		});
 

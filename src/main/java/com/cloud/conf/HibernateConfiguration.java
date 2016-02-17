@@ -1,4 +1,4 @@
-package com.teamcloud.conf;
+package com.cloud.conf;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ import java.util.Properties;
 @EnableTransactionManagement
 @ComponentScan
 @PropertySource( value = { "classpath:application.properties" })
-public class HibernateConf {
+public class HibernateConfiguration {
 
     @Autowired
     private Environment environment;

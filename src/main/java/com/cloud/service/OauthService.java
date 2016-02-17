@@ -1,6 +1,6 @@
-package com.teamcloud.service;
+package com.cloud.service;
 
-import com.teamcloud.model.vo.UserVO;
+import com.cloud.model.vo.UserVO;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;

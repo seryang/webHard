@@ -1,10 +1,10 @@
-package com.teamcloud.controller;
+package com.cloud.controller;
 
-import com.teamcloud.model.vo.FolderTreeVO;
-import com.teamcloud.model.vo.MemoHistoryVO;
-import com.teamcloud.model.vo.UserVO;
-import com.teamcloud.service.DataService;
-import com.teamcloud.service.DirectoryTreeService;
+import com.cloud.model.vo.FolderTreeVO;
+import com.cloud.model.vo.UserVO;
+import com.cloud.service.DirectoryTreeService;
+import com.cloud.model.vo.MemoHistoryVO;
+import com.cloud.service.DataService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,18 +38,16 @@ public class DataController {
     @RequestMapping(value="/uploadCheck", method = RequestMethod.POST)
     @ResponseBody
     public boolean uploadFileCheck(@RequestParam("name") String fileName, HttpSession session) {
-        boolean flag = false;
+        boolean result = false;
 
         try {
             fileName = new String(fileName.getBytes("UTF-8"), "ISO-8859-1"); // 인코딩
             String path = session.getAttribute("path") + "/" +  fileName;
-            if(new File(path).exists()){
-                flag = true;
-            }
+            result = new File(path).exists();
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
         }
-        return flag;
+        return result;
     }
 
     // 파일 업로드

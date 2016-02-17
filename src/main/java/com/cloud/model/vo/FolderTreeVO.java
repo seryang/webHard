@@ -1,4 +1,4 @@
-package com.teamcloud.model.vo;
+package com.cloud.model.vo;
 
 import java.util.List;
 

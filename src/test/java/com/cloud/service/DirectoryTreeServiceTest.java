@@ -1,7 +1,6 @@
-package com.teamcloud.service;
+package com.cloud.service;
 
 import com.cloud.model.vo.FolderTreeVO;
-import com.cloud.service.DirectoryTreeService;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

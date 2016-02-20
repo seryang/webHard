@@ -6,7 +6,7 @@ WebHard [ Data Storage ] v 1.0.0
 
 > Used skill
 
-- JAVA, Spring (Boot & MVC), Hibernate, JavaScript(jQuery/Ajax), Thymeleaf, HTML5/CSS3, MySQL, JSON, Oauth 2.0, Bootstrap, Gradle, Github, Bower, Grunt
+- JAVA, Spring (Boot & MVC), Hibernate, JavaScript(jQuery/Ajax), Thymeleaf, HTML5, CSS, MySQL, JSON, Oauth 2.0, Bootstrap, Gradle, Github, Bower, Grunt
 
 > Project Member 
 

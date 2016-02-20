@@ -11,10 +11,10 @@ public class MemoVO {
     private int id;
 
     @Column
-    private String uid;
+    private String path;
 
     @Column
-    private String path;
+    private String uid;
 
     public MemoVO(){}
 
@@ -23,12 +23,10 @@ public class MemoVO {
         this.path = path;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
+    public MemoVO(int id, String path, String uid) {
         this.id = id;
+        this.uid = uid;
+        this.path = path;
     }
 
     public String getUid() {
@@ -37,6 +35,14 @@ public class MemoVO {
 
     public void setUid(String uid) {
         this.uid = uid;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getPath() {

@@ -24,11 +24,6 @@ public class MemoHistoryVO {
 
     public MemoHistoryVO(){}
 
-    public MemoHistoryVO(String memoContent, Date regDate) {
-        this.memoContent = memoContent;
-        this.regDate = regDate;
-    }
-
     public MemoHistoryVO(MemoVO memoId, String memoContent, Date regDate) {
         this.memoId = memoId;
         this.memoContent = memoContent;
@@ -40,14 +35,6 @@ public class MemoHistoryVO {
         this.memoId = memoId;
         this.memoContent = memoContent;
         this.regDate = regDate;
-    }
-
-    public int getNo() {
-        return no;
-    }
-
-    public void setNo(int no) {
-        this.no = no;
     }
 
     public MemoVO getMemoId() {
@@ -62,12 +49,20 @@ public class MemoHistoryVO {
         return memoContent;
     }
 
-    public void setMemoContent(String memoContent) {
-        this.memoContent = memoContent;
-    }
-
     public Date getRegDate() {
         return regDate;
+    }
+
+    public int getNo() {
+        return no;
+    }
+
+    public void setNo(int no) {
+        this.no = no;
+    }
+
+    public void setMemoContent(String memoContent) {
+        this.memoContent = memoContent;
     }
 
     public void setRegDate(Date regDate) {

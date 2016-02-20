@@ -39,6 +39,7 @@ public class MemoDao {
     // [Memo Table]  - 데이터 삽입
     public void insertMemo(MemoVO mvo) throws Exception {
         Session session = getSession();
+        System.out.println("mvo : " + mvo);
         session.save(mvo);
     }
 

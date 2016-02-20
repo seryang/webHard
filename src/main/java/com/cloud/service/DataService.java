@@ -148,9 +148,15 @@ public class DataService {
 	// 메모 삽입
 	public MemoHistoryVO addMemo(String path, String uid, String comment) throws Exception{
 		// select 해서 id 가져오기
-		MemoVO mvo = memoDao.selectMemoId(path,uid);
+		MemoVO mvo = memoDao.selectMemoId(path, uid);
 
-		// id가 없다면
+		System.out.println("mvo : " + mvo);
+
+		System.out.println("path : " + path);
+		System.out.println("uid : " + uid);
+		System.out.println("comment : " + comment);
+
+		// Id가 없다면
 		if(mvo == null) {
 			memoDao.insertMemo(new MemoVO(path, uid)); // Memo테이블에 path와 , uid 삽입
 			mvo = memoDao.selectMemoId(path, uid); // MemoID 가져오기

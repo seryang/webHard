@@ -31,7 +31,7 @@ public class LoginController {
 	@Autowired
 	private Environment environment;
 
-	Logger logger = LoggerFactory.getLogger(this.getClass());
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@RequestMapping(value="/")
 	public String index(HttpSession session, Model model,

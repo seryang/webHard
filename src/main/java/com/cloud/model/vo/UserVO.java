@@ -26,10 +26,6 @@ public class UserVO {
 	}public UserVO(String email, String name, String profile_image) {
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public String getImage() {
 		return image;
 	}
@@ -44,6 +40,10 @@ public class UserVO {
 
 	public void setTeamName(String teamName) {
 		this.teamName = teamName;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	@Override

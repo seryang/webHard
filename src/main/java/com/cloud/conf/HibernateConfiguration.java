@@ -28,7 +28,7 @@ public class HibernateConfiguration {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan("com.teamcloud.model.vo");
+        sessionFactory.setPackagesToScan("com.cloud.model.vo");
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
     }

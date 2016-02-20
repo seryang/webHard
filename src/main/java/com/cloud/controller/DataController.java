@@ -32,7 +32,7 @@ public class DataController {
     @Autowired
     private DataService dataService;
 
-    Logger logger = LoggerFactory.getLogger(this.getClass());
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     // 파일 invalid check
     @RequestMapping(value="/uploadCheck", method = RequestMethod.POST)
@@ -54,14 +54,14 @@ public class DataController {
     @RequestMapping(value="/uploadFile", method = RequestMethod.POST)
     @ResponseBody
     public boolean uploadFile(MultipartFile uploadfile, HttpSession session) {
-        boolean flag = false;
+        boolean result = false;
         try {
             dataService.upload(uploadfile, (String) session.getAttribute("path"));
-            flag = true;
+            result = true;
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
         }
-        return flag;
+        return result;
     }
 
     // 파일 다운로드
@@ -109,7 +109,7 @@ public class DataController {
     // 바로가기 - 경로체크
     @RequestMapping(value = "/checkPath")
     @ResponseBody
-    public String checkPath(@RequestParam("path") String path, Model model){
+    public String checkPath(@RequestParam("path") String path){
         String checkMsg = "Not found.";
         path = environment.getRequiredProperty("absolute.path") +"/"+ path;
 
@@ -192,7 +192,6 @@ public class DataController {
 
         try{
             hvo = dataService.addMemo( path, ( ((UserVO)session.getAttribute("userInfo")).getEmail() ), comment);
-
             logger.info("hvo : {}", hvo);
         }catch(Exception e){
             logger.error(e.getMessage(), e);

@@ -150,12 +150,6 @@ public class DataService {
 		// select 해서 id 가져오기
 		MemoVO mvo = memoDao.selectMemoId(path, uid);
 
-		System.out.println("mvo : " + mvo);
-
-		System.out.println("path : " + path);
-		System.out.println("uid : " + uid);
-		System.out.println("comment : " + comment);
-
 		// Id가 없다면
 		if(mvo == null) {
 			memoDao.insertMemo(new MemoVO(path, uid)); // Memo테이블에 path와 , uid 삽입

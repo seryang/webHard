@@ -33,11 +33,11 @@
             </h1>
         </header>
         <div class="profile-photo-container" align="center">
-            <img th:src="${userInfo.image}" alt="profile" class="img-circle"/>
+            <img th:src="${session.userInfo.image}" alt="profile" class="img-circle"/>
         </div>
         <ul align="center">
-            <li><font color="white" th:text="${userInfo.email}" /></li>
-            <li><font color="white" th:text="${userInfo.teamName} + ' / ' + ${userInfo.name}"/></li>
+            <li><font color="white" th:text="${session.userInfo.email}" /></li>
+            <li><font color="white" th:text="${session.userInfo.teamName} + ' / ' + ${session.userInfo.name}"/></li>
             <li><a href="/logout">Logout</a></li>
             <hr/>
         </ul>
@@ -88,13 +88,13 @@
         <div id ="filedrag">
             <div class="templatemo-content-container">
                 <div class="alert alert alert-info" role="alert">
-                    <p><b> [PATH] &nbsp;&nbsp;&nbsp;</b> <i th:text=" ${path}"/> </p>
+                    <p><b> [PATH] &nbsp;&nbsp;&nbsp;</b> <i th:text=" ${session.path}"/> </p>
                 </div>
                 <div class="alert alert-warning" role="alert">
                     <p>
-                        <b> [INFO] </b> <img src="img/folder.jpg" title="Folder"/> <b th:text="${list.dirSize}"/> <img src="img/file.jpg" title="File"/>  <b th:text="${list.fileSize}"/> &nbsp;&nbsp;&nbsp; (<b th:text="${list.dirSize}+${list.fileSize}"/>)
+                        <b> [INFO] </b> <img src="img/folder.jpg" title="Folder"/> <b th:text="${session.list.dirSize}"/> <img src="img/file.jpg" title="File"/>  <b th:text="${session.list.fileSize}"/> &nbsp;&nbsp;&nbsp; (<b th:text="${session.list.dirSize}+${session.list.fileSize}"/>)
                         &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-                        <b> [PAGE] </b> 페이지당 보여줄 Data의 개수 : <input id="changeCountValue" type="number" min="1" th:value="${list.pagingSize}" th:max="${list.dirSize}+${list.fileSize}"/> <img src="img/check.png" title="PAGE Setting" style="cursor:pointer;" onclick="changePage()"/>
+                        <b> [PAGE] </b> 페이지당 보여줄 Data의 개수 : <input id="changeCountValue" type="number" min="1" th:value="${session.list.pagingSize}" th:max="${session.list.dirSize}+${session.list.fileSize}"/> <img src="img/check.png" title="PAGE Setting" style="cursor:pointer;" onclick="changePage()"/>
                     </p>
                 </div>
                 <div class="templatemo-flex-row flex-content-row templatemo-overflow-hidden">
@@ -122,15 +122,15 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr class="showList" th:if="${parentDirectory} != ''">
+                                    <tr class="showList" th:if="${session.parentDirectory} != ''">
                                         <td></td>
-                                        <td class="folder-list" style="cursor:pointer" th:value="${parentDirectory}"><img src="img/root.png" th:text=".." /></td>
+                                        <td class="folder-list" style="cursor:pointer" th:value="${session.parentDirectory}"><img src="img/root.png" th:text=".." /></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                     </tr>
-                                    <tr class="showList" th:each="list : ${list.dataList}">
+                                    <tr class="showList" th:each="list : ${session.list.dataList}">
                                         <td><input type="radio" name="checkData" th:value="${list.name}"/></td>
                                         <td th:class="${list.file ? 'file-list' : 'folder-list'}" th:value="${list.file ? list.name : list.path}" style="cursor: pointer;">
                                             <img th:src="${list.file ? 'img/file.jpg' : 'img/folder.jpg'}" th:text="${list.name}" /></td>
@@ -155,7 +155,7 @@
 
                             <li th:class="${ ( (param.currentPage != null) and (param.currentPage[0] == page.toString()))
                                                                               or ( (param.currentPage == null) and (page == 1) ) } ? 'active' : ''"
-                                th:each="page : ${#numbers.sequence( 1, list.pageList)}">
+                                th:each="page : ${#numbers.sequence( 1, session.list.pageList)}">
                                 <a th:if="${page != 0}" th:text="${page}" class="page-num" style="cursor:pointer;"/>
                             </li>
 
@@ -175,7 +175,7 @@
 
 <!-- modal fade -->
 <div class="modal fade" >
-    <div class="header" align="center" th:text="'['+${userInfo.name} + '님의 메모 History]'"/>
+    <div class="header" align="center" th:text="'['+${session.userInfo.name} + '님의 메모 History]'"/>
     <div class="content" align="center"></div>
     <form align="center" id="memoform" onSubmit="return false;">
         <input type="text" id="memocontent" placeholder="write comment here! "/>

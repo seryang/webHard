@@ -24,23 +24,10 @@ public class MemoDao {
         return sessionFactory.getCurrentSession();
     }
 
-    // [Memo Table] - Path에 맞는 Memo ID 구하기
-    public MemoVO selectMemoId(String path, String uid) throws Exception{
-        Session session = getSession();
-        return (MemoVO) session.createCriteria(MemoVO.class).add( Restrictions.eq("uid", uid)).add(Restrictions.eq("path", path)).uniqueResult();
-    }
-
     // [MemoHistory Table] - Memo ID를 참조하는 MemoHistory 리스트 가져오기
     public List<MemoHistoryVO> selectMemoHistoryList(MemoVO id) throws Exception {
         Session session = getSession();
         return session.createCriteria(MemoHistoryVO.class).add(Restrictions.eq("memoId", id)).list();
-    }
-
-    // [Memo Table]  - 데이터 삽입
-    public void insertMemo(MemoVO mvo) throws Exception {
-        Session session = getSession();
-        System.out.println("mvo : " + mvo);
-        session.save(mvo);
     }
 
     // [MemoHistory Table] - 데이터 삽입
@@ -66,5 +53,17 @@ public class MemoDao {
     public MemoHistoryVO selectMemoHistoryId(int no) throws Exception {
         Session session = getSession();
         return (MemoHistoryVO) session.createCriteria(MemoHistoryVO.class).add(Restrictions.eq("no", no)).uniqueResult();
+    }
+
+    // [Memo Table] - Path에 맞는 Memo ID 구하기
+    public MemoVO selectMemoId(String path, String uid) throws Exception{
+        Session session = getSession();
+        return (MemoVO) session.createCriteria(MemoVO.class).add( Restrictions.eq("uid", uid)).add(Restrictions.eq("path", path)).uniqueResult();
+    }
+
+    // [Memo Table]  - 데이터 삽입
+    public void insertMemo(MemoVO mvo) throws Exception {
+        Session session = getSession();
+        session.save(mvo);
     }
 }

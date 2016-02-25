@@ -1,17 +1,19 @@
 package com.cloud.controller;
 
 import com.cloud.model.vo.FolderTreeVO;
-import com.cloud.model.vo.UserVO;
-import com.cloud.service.DirectoryTreeService;
 import com.cloud.model.vo.MemoHistoryVO;
+import com.cloud.model.vo.UserVO;
 import com.cloud.service.DataService;
+import com.cloud.service.DirectoryTreeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
@@ -21,7 +23,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@SessionAttributes({"userInfo","list", "path", "parentDirectory", "pageList"})
 public class DataController {
     @Autowired
     private Environment environment;
@@ -92,13 +93,13 @@ public class DataController {
 
     // 경로 변경
     @RequestMapping(value = "/moveFolder")
-    public String moveFolder(@RequestParam("path") String movePath, Model model,
+    public String moveFolder(@RequestParam("path") String movePath, HttpSession session,
                              @RequestParam(required = false, defaultValue = "1", value = "currentPage") int currentPage){
         try {
             if(new File(movePath).exists()){
-                model.addAttribute("path", movePath);
-                model.addAttribute("list", dataService.getFileFolderList(movePath, currentPage));
-                model.addAttribute("parentDirectory", dataService.getParentDirectory(movePath));
+                session.setAttribute("path", movePath);
+                session.setAttribute("list", dataService.getFileFolderList(movePath, currentPage));
+                session.setAttribute("parentDirectory", dataService.getParentDirectory(movePath));
             }
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
@@ -125,15 +126,15 @@ public class DataController {
 
     // 바로가기
     @RequestMapping(value = "/shortCut")
-    public String shortCut(@RequestParam("path") String path, Model model,
+    public String shortCut(@RequestParam("path") String path, HttpSession session,
                            @RequestParam(required = false, defaultValue = "1", value = "currentPage") int currentPage){
         path = environment.getRequiredProperty("absolute.path") +"/"+ path;
 
         try {
             if(new File(path).exists()){
-                model.addAttribute("list", dataService.getFileFolderList(path, currentPage));
-                model.addAttribute("parentDirectory", dataService.getParentDirectory(path));
-                model.addAttribute("path", path);
+                session.setAttribute("list", dataService.getFileFolderList(path, currentPage));
+                session.setAttribute("parentDirectory", dataService.getParentDirectory(path));
+                session.setAttribute("path", path);
             }
         } catch (Exception e) {
             logger.error(e.getMessage(), e);

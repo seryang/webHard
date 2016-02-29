@@ -3,7 +3,7 @@ package com.cloud.model.vo;
 import javax.persistence.*;
 
 @Entity
-@Table(name="memo")
+@Table(schema = "cloud", name="memo")
 public class MemoVO {
     @Id
     @GeneratedValue // autoincrement

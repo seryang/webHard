@@ -1,9 +1,9 @@
 package com.cloud.controller;
 
+import com.cloud.model.vo.Token;
 import com.cloud.model.vo.UserVO;
 import com.cloud.service.DataService;
 import com.cloud.service.OauthService;
-import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,7 +57,7 @@ public class LoginController {
 		String url = "redirect:/";
 
 		try {
-			JSONObject tokenInfo = oauthService.getToken(code);
+			Token tokenInfo = oauthService.getToken(code);
 			if(tokenInfo != null){
 				UserVO user = oauthService.getUserInfo(tokenInfo);
 				session.setAttribute("userInfo", user);

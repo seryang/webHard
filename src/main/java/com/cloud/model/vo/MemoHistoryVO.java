@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="memo_history")
+@Table(schema = "cloud", name="memo_history")
 public class MemoHistoryVO {
 
     @Id

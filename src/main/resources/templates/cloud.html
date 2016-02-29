@@ -33,11 +33,11 @@
             </h1>
         </header>
         <div class="profile-photo-container" align="center">
-            <img th:src="${session.userInfo.image}" alt="profile" class="img-circle"/>
+            <img th:src="${session.userInfo.profile_image}" alt="profile" class="img-circle"/>
         </div>
         <ul align="center">
             <li><font color="white" th:text="${session.userInfo.email}" /></li>
-            <li><font color="white" th:text="${session.userInfo.teamName} + ' / ' + ${session.userInfo.name}"/></li>
+            <li><font color="white" th:text="${session.userInfo.name}"/></li>
             <li><a href="/logout">Logout</a></li>
             <hr/>
         </ul>

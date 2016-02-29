@@ -3,15 +3,7 @@ package com.cloud.model.vo;
 public class UserVO {
 	private String email;
 	private String name;
-	private String image;
-	private String teamName;
-
-	public UserVO(String email, String name, String image, String teamName) {
-		this.email = email;
-		this.name = name;
-		this.image = image;
-		this.teamName = teamName;
-	}
+	private String profile_image;
 
 	public String getEmail() {
 		return email;
@@ -23,34 +15,17 @@ public class UserVO {
 
 	public String getName() {
 		return name;
-	}public UserVO(String email, String name, String profile_image) {
-	}
-
-	public String getImage() {
-		return image;
-	}
-
-	public void setImage(String image) {
-		this.image = image;
-	}
-
-	public String getTeamName() {
-		return teamName;
-	}
-
-	public void setTeamName(String teamName) {
-		this.teamName = teamName;
 	}
 
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("UserVO [email=").append(email).append(", name=").append(name).append(", image=")
-				.append(image).append(", teamName=").append(teamName).append("]");
-		return builder.toString();
+	public String getProfile_image() {
+		return profile_image;
+	}
+
+	public void setProfile_image(String profile_image) {
+		this.profile_image = profile_image;
 	}
 }

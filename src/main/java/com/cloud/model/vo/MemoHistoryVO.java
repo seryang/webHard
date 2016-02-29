@@ -12,7 +12,7 @@ public class MemoHistoryVO {
     @Column(name="no")
     private int no;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="memoId")
     private MemoVO memoId;
 
@@ -73,6 +73,7 @@ public class MemoHistoryVO {
     public String toString() {
         final StringBuffer sb = new StringBuffer("MemoHistoryVO{");
         sb.append("no=").append(no);
+        sb.append(", memoId=").append(memoId);
         sb.append(", memoContent='").append(memoContent).append('\'');
         sb.append(", regDate=").append(regDate);
         sb.append('}');

@@ -43,7 +43,7 @@ public class DataController {
 
         try {
             fileName = new String(fileName.getBytes("UTF-8"), "ISO-8859-1"); // 인코딩
-            String path = session.getAttribute("path") + "/" +  fileName;
+            String path = session.getAttribute("path") + File.separator +  fileName;
             result = new File(path).exists();
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
@@ -112,7 +112,7 @@ public class DataController {
     @ResponseBody
     public String checkPath(@RequestParam("path") String path){
         String checkMsg = "Not found.";
-        path = environment.getRequiredProperty("absolute.path") +"/"+ path;
+        path = environment.getRequiredProperty("absolute.path") + File.separator + path;
 
         try {
             if(new File(path).exists()){
@@ -128,7 +128,7 @@ public class DataController {
     @RequestMapping(value = "/shortCut")
     public String shortCut(@RequestParam("path") String path, HttpSession session,
                            @RequestParam(required = false, defaultValue = "1", value = "currentPage") int currentPage){
-        path = environment.getRequiredProperty("absolute.path") +"/"+ path;
+        path = environment.getRequiredProperty("absolute.path") + File.separator + path;
 
         try {
             if(new File(path).exists()){
@@ -165,7 +165,7 @@ public class DataController {
     public List<MemoHistoryVO> memo(@RequestParam("path") String path, @RequestParam("type") String type, HttpSession session) {
 
         if(type.equals("file")){
-            path = session.getAttribute("path") + "/" + path;
+            path = session.getAttribute("path") + File.separator + path;
         }
 
         List<MemoHistoryVO> list = null;
@@ -186,7 +186,7 @@ public class DataController {
     @ResponseBody
     public MemoHistoryVO writeMemo(@RequestParam("path") String path, @RequestParam("type") String type, HttpSession session, @RequestParam("comment") String comment){
         if(type.equals("file")){
-            path = session.getAttribute("path") + "/" + path;
+            path = session.getAttribute("path") + File.separator + path;
         }
 
         MemoHistoryVO hvo = null;

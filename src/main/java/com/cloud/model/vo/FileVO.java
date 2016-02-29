@@ -51,16 +51,6 @@ public class FileVO implements FileAware{
 	}
 
 	@Override
-	public String toString() {
-		return "FileVO{" +
-				"fileName='" + fileName + '\'' +
-				", fileSize=" + fileSize +
-				", fileDate='" + fileDate + '\'' +
-				", fileType='" + fileType + '\'' +
-				'}';
-	}
-
-	@Override
 	public boolean isFile() {
 		return true;
 	}
@@ -77,7 +67,7 @@ public class FileVO implements FileAware{
 
 	@Override
 	public String getSize() {
-		return getFileSize() + " KB";
+		return getFileSize() + "Byte";
 	}
 
 	@Override

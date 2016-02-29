@@ -34,13 +34,6 @@ public class DirectoryVO implements FileAware{
         this.directoryName = directoryName;
     }
 
-    @Override
-    public String toString() {
-        return "DirectoryVO{" +
-                "directoryName='" + directoryName + '\'' +
-                ", directoryPath='" + directoryPath + '\'' +
-                '}';
-    }
 
     @Override
     public boolean isFile() {

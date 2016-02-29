@@ -42,7 +42,7 @@ public class DataService {
 
 		for(String go : fileFolderList){
 
-			File checkFile = new File(dirPath + "/" + go);
+			File checkFile = new File(dirPath + File.separator + go);
 
 			if(checkFile.isDirectory()){
 				DirectoryVO dvo = new DirectoryVO();
@@ -92,8 +92,7 @@ public class DataService {
 	// 폴더 생성하기
 	public boolean addFolder(String parentFolder, String childFolder) throws Exception {
 		boolean flag = false;
-		String fullPath = parentFolder+"/"+childFolder;
-
+		String fullPath = parentFolder + File.separator + childFolder;
 		File dir = new File(fullPath);
 
 		if(!dir.exists()){
@@ -115,7 +114,7 @@ public class DataService {
 
 	// 파일 다운로드
 	public void download(String path, String fileName, HttpServletResponse response) throws Exception {
-		String downloadPath = path+"/"+fileName;
+		String downloadPath = path + File.separator + fileName;
 		fileName = new String(fileName.getBytes("UTF-8"), "ISO-8859-1"); // 인코딩
 		byte fileByte[] = FileUtils.readFileToByteArray(new File(downloadPath));
 

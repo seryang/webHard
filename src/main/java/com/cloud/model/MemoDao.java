@@ -49,7 +49,8 @@ public class MemoDao {
 
     // [MemoHistory Table] - MemoHistory ID로 MemoHistory 객체 select
     public MemoHistoryVO selectMemoHistoryId(int no) throws Exception {
-        return (MemoHistoryVO) getSession().createCriteria(MemoHistoryVO.class).add(Restrictions.eq("no", no)).uniqueResult();
+        return (MemoHistoryVO) getSession().createCriteria(MemoHistoryVO.class)
+        .createAlias("memoId", "m", JoinType.LEFT_OUTER_JOIN).add(Restrictions.eq("no", no)).uniqueResult();
     }
 
     // [Memo Table] - Path에 맞는 Memo ID 구하기

@@ -8,8 +8,6 @@ public class FileVO implements FileAware{
 	private String fileDate;
 	private String fileType;
 
-	public FileVO(){}
-
 	public int getId() {
 		return id;
 	}
@@ -67,7 +65,7 @@ public class FileVO implements FileAware{
 
 	@Override
 	public String getSize() {
-		return getFileSize() + "Byte";
+		return getFileSize() + " Byte";
 	}
 
 	@Override

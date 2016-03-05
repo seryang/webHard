@@ -7,9 +7,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Seryang on 2016. 2. 10..
- */
 @Service
 public class DirectoryTreeService {
 

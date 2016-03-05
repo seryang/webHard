@@ -9,7 +9,6 @@ public class MemoHistoryVO {
 
     @Id
     @GeneratedValue
-    @Column(name="no")
     private int no;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -25,13 +24,6 @@ public class MemoHistoryVO {
     public MemoHistoryVO(){}
 
     public MemoHistoryVO(MemoVO memoId, String memoContent, Date regDate) {
-        this.memoId = memoId;
-        this.memoContent = memoContent;
-        this.regDate = regDate;
-    }
-
-    public MemoHistoryVO(int no, MemoVO memoId, String memoContent, Date regDate) {
-        this.no = no;
         this.memoId = memoId;
         this.memoContent = memoContent;
         this.regDate = regDate;
@@ -69,14 +61,4 @@ public class MemoHistoryVO {
         this.regDate = regDate;
     }
 
-    @Override
-    public String toString() {
-        final StringBuffer sb = new StringBuffer("MemoHistoryVO{");
-        sb.append("no=").append(no);
-        sb.append(", memoId=").append(memoId);
-        sb.append(", memoContent='").append(memoContent).append('\'');
-        sb.append(", regDate=").append(regDate);
-        sb.append('}');
-        return sb.toString();
-    }
 }

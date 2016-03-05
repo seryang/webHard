@@ -23,12 +23,6 @@ public class MemoVO {
         this.path = path;
     }
 
-    public MemoVO(int id, String path, String uid) {
-        this.id = id;
-        this.uid = uid;
-        this.path = path;
-    }
-
     public String getUid() {
         return uid;
     }
@@ -53,13 +47,4 @@ public class MemoVO {
         this.path = path;
     }
 
-    @Override
-    public String toString() {
-        final StringBuffer sb = new StringBuffer("MemoVO{");
-        sb.append("id=").append(id);
-        sb.append(", uid='").append(uid).append('\'');
-        sb.append(", path='").append(path).append('\'');
-        sb.append('}');
-        return sb.toString();
-    }
 }

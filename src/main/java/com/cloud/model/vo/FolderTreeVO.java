@@ -1,7 +1,12 @@
 package com.cloud.model.vo;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.List;
 
+@Getter
+@Setter
 public class FolderTreeVO {
     private String id;
     private String text;
@@ -11,38 +16,6 @@ public class FolderTreeVO {
     public FolderTreeVO(String text, String id) {
         this.text = text;
         this.id = id;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    public List<FolderTreeVO> getChildren() {
-        return children;
-    }
-
-    public void setChildren(List<FolderTreeVO> children) {
-        this.children = children;
-    }
-
-    public void setState(State state) {
-        this.state = state;
-    }
-
-    public State getState() {
-        return state;
     }
 
     public void setOpened(boolean opened) {

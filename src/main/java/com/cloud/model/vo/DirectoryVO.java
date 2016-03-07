@@ -1,5 +1,10 @@
 package com.cloud.model.vo;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class DirectoryVO implements FileAware{
 
     private int id;
@@ -7,33 +12,6 @@ public class DirectoryVO implements FileAware{
     private String directoryName;
 
     private String directoryPath;
-
-    public DirectoryVO(){}
-
-    public String getDirectoryPath() {
-        return directoryPath;
-    }
-
-    public void setDirectoryPath(String directoryPath) {
-        this.directoryPath = directoryPath;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getDirectoryName() {
-        return directoryName;
-    }
-
-    public void setDirectoryName(String directoryName) {
-        this.directoryName = directoryName;
-    }
-
 
     @Override
     public boolean isFile() {

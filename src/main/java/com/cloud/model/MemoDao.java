@@ -26,9 +26,9 @@ public class MemoDao {
     }
 
     // [MemoHistory Table] - Memo ID를 참조하는 MemoHistory 리스트 가져오기
-    public List<MemoHistoryVO> selectMemoHistoryList(MemoVO id) throws Exception {
-        return getSession().createCriteria(MemoHistoryVO.class)
-                .createAlias("memoId", "m", JoinType.LEFT_OUTER_JOIN).add(Restrictions.eq("memoId", id)).list();
+    public List selectMemoHistoryList(MemoVO id) throws Exception {
+        return getSession().createCriteria(MemoHistoryVO.class).createAlias("memoId", "memoId", JoinType.LEFT_OUTER_JOIN)
+                .add(Restrictions.eq("memoId", id)).list();
     }
 
     // [MemoHistory Table] - 데이터 삽입
@@ -37,8 +37,7 @@ public class MemoDao {
     }
 
     // [MemoHistory Table] - 메모 삭제
-    public void deleteMemo(int no) throws Exception {
-        MemoHistoryVO hvo = selectMemoHistoryId(no);
+    public void deleteMemo(MemoHistoryVO hvo) throws Exception {
         getSession().delete(hvo);
     }
 
@@ -50,7 +49,7 @@ public class MemoDao {
     // [MemoHistory Table] - MemoHistory ID로 MemoHistory 객체 select
     public MemoHistoryVO selectMemoHistoryId(int no) throws Exception {
         return (MemoHistoryVO) getSession().createCriteria(MemoHistoryVO.class)
-        .createAlias("memoId", "m", JoinType.LEFT_OUTER_JOIN).add(Restrictions.eq("no", no)).uniqueResult();
+        .createAlias("memoId", "memoId", JoinType.LEFT_OUTER_JOIN).add(Restrictions.eq("no", no)).uniqueResult();
     }
 
     // [Memo Table] - Path에 맞는 Memo ID 구하기

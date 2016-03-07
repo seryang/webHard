@@ -1,8 +1,13 @@
 package com.cloud.model.vo;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.Date;
 
+@Getter
+@Setter
 @Entity
 @Table(schema = "cloud", name="memo_history")
 public class MemoHistoryVO {
@@ -28,37 +33,4 @@ public class MemoHistoryVO {
         this.memoContent = memoContent;
         this.regDate = regDate;
     }
-
-    public MemoVO getMemoId() {
-        return memoId;
-    }
-
-    public void setMemoId(MemoVO memoId) {
-        this.memoId = memoId;
-    }
-
-    public String getMemoContent() {
-        return memoContent;
-    }
-
-    public Date getRegDate() {
-        return regDate;
-    }
-
-    public int getNo() {
-        return no;
-    }
-
-    public void setNo(int no) {
-        this.no = no;
-    }
-
-    public void setMemoContent(String memoContent) {
-        this.memoContent = memoContent;
-    }
-
-    public void setRegDate(Date regDate) {
-        this.regDate = regDate;
-    }
-
 }

@@ -40,9 +40,9 @@ public class DataService {
 		int dirSize = 0;
 		int fileSize = 0;
 
-		for(String go : fileFolderList){
+		for(String fileName : fileFolderList){
 
-			File checkFile = new File(dirPath + File.separator + go);
+			File checkFile = new File(dirPath + File.separator + fileName);
 
 			if(checkFile.isDirectory()){
 				DirectoryVO dvo = new DirectoryVO();
@@ -163,7 +163,8 @@ public class DataService {
 
 	// 메모 삭제
 	public void removeMemo(int no) throws Exception{
-		memoDao.deleteMemo(no);
+		MemoHistoryVO hvo = memoDao.selectMemoHistoryId(no);
+		memoDao.deleteMemo(hvo);
 	}
 
 	// 메모 수정

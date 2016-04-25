@@ -8,7 +8,7 @@ WebHard [ SR Cloud ] v 1.0.0
 
 > Used skill
 
-- JAVA, Spring (Boot & MVC), Hibernate, JavaScript(jQuery/Ajax), Thymeleaf, HTML5, CSS, MySQL, jsTree, JSON, Oauth 2.0, Bootstrap, Gradle, Github, lombok, Bower, Grunt
+- JAVA, Spring (Boot & MVC), Hibernate, JavaScript(jQuery/Ajax), Thymeleaf, HTML5, CSS, MySQL, jsTree, JSON, Oauth 2.0, Bootstrap, Gradle, Github, lombok, Grunt
 
 > Project Member 
 

@@ -1,34 +1,17 @@
-*target*
-*.jar
-*.war
-*.ear
-*.class
+/.gradle
+/.settings
+/bin
+/build
+/.classpath
+/.project
+/bower_components
+/logLocation_IS_UNDEFINED
+/node_modules
+/.idea
+/src/main/main.iml
+/src/test/test.iml
+/src/main/resources/rebel.xml
+/.eslintrc
+/src/main/resources/static/compile
 *.iml
-node_modules
-
-# eclipse specific git ignore
-*.pydevproject
-.project
-.idea/*
-.metadata
-.settings
 Cloud/*
-.gradle
-*.DS_Store
-bin/**
-	 tmp/**
-	 tmp/**/*
-			  *.tmp
-			  *.bak
-			  *.swp
-			  *~.nib
-			  local.properties
-			  .classpath
-			  .settings/
-			  .loadpath
-# External tool builders
-.externalToolBuilders/
-
-# Locally stored "Eclipse launch configurations"
-*.launch
-/build/

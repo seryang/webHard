@@ -19,6 +19,9 @@ public class OauthService {
 	@Autowired
 	private RestTemplate restTemplate;
 
+	private final String imgResize = "_80x80";
+	private final String [] imgList = {".jpg", ".jpeg", ".png", ".gif", ".bmp"};
+
 	public String getUriPath(){
 		UriComponentsBuilder urlBuilder = UriComponentsBuilder.fromHttpUrl( environment.getRequiredProperty("oauth.url.authorization") )
 				.queryParam( environment.getRequiredProperty("oauth.client.id.key"), environment.getRequiredProperty("oauth.client.id.value") )
@@ -40,7 +43,10 @@ public class OauthService {
 		UserVO uvo = restTemplate.getForObject(environment.getRequiredProperty("oauth.url.my.info")+"?token="
 												+tokenInfo.getAccess_token(), UserVO.class);
 
-		uvo.setProfile_image( uvo.getProfile_image().replace(".jpg","_80x80.jpg").replace(".png","_80x80.png").replace(".gif","_80x80x.gif") );
+		for(String imgType : imgList) {
+			uvo.setProfile_image(uvo.getProfile_image().replace(imgType, imgResize + imgType) );
+		}
+
 		return uvo;
 	}
 }

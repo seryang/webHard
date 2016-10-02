@@ -1,5 +1,6 @@
 package com.cloud.model.vo;
 
+import com.cloud.util.ByteFormatUtil;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -30,7 +31,7 @@ public class FileVO implements FileAware{
 
 	@Override
 	public String getSize() {
-		return getFileSize() + " Byte";
+		return ByteFormatUtil.byteFormat(getFileSize());
 	}
 
 	@Override

@@ -19,7 +19,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 @Controller
-@PropertySource( value = { "classpath:application.properties" })
 public class LoginController {
 
 	@Autowired

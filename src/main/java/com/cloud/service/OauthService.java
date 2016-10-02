@@ -43,8 +43,8 @@ public class OauthService {
 		UserVO uvo = restTemplate.getForObject(environment.getRequiredProperty("oauth.url.my.info")+"?token="
 												+tokenInfo.getAccess_token(), UserVO.class);
 
-		for(String imgType : imgList){
-			uvo.setProfile_image( uvo.getProfile_image().replace(imgType, imgResize + imgType) );
+		for(String imgType : imgList) {
+			uvo.setProfile_image(uvo.getProfile_image().replace(imgType, imgResize + imgType) );
 		}
 
 		return uvo;

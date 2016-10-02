@@ -9,7 +9,6 @@ public class WebConfig {
 
     @Bean
     public RestTemplate restTemplate() {
-        RestTemplate rest = new RestTemplate();
-        return rest;
+        return new RestTemplate();
     }
 }

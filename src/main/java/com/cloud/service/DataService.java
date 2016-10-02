@@ -18,7 +18,6 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Service
-@PropertySource( value = { "classpath:application.properties" })
 public class DataService {
 
 	@Autowired
